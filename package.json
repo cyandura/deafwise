@@ -19,8 +19,10 @@
     "@types/react-dom": "^18.2.0"
   },
   "scripts": {
+    "start": "react-scripts start",
     "start-local": "react-scripts start",
-    "start-prod": "react-scripts build && serve -s build"
+    "start-prod": "react-scripts build && serve -s build",
+    "build": "react-scripts build"
   },
   "browserslist": {
     "production": [

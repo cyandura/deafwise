@@ -4,7 +4,6 @@ import { Box, Typography } from '@mui/material';
 const TopBanner: React.FC = () => (
   <Box sx={{ 
     bgcolor: '#17024a',
-    
     py: 4, 
     textAlign: 'center',
     color: 'white',
