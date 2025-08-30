@@ -15,5 +15,5 @@
     "moduleResolution": "node",
     "resolveJsonModule": true
   },
-  "include": ["src"]
+  "include": ["src", "src/components/pages/.tsx"]
 } 

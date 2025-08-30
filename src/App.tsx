@@ -6,6 +6,9 @@ import TaxServicesPage from './components/pages/TaxServicesPage';
 import RetirementPlanningPage from './components/pages/RetirementPlanningPage';
 import OtherServices from './components/pages/OtherServices';
 import About from './components/pages/About';
+import FinancialPlanning from './components/pages/FinancialPlanning';
+import MESP from './components/pages/MESP';
+import Contact from './components/pages/Contact';
 
 function TabPanel(props: { children?: React.ReactNode; value: number; index: number }) {
   const { children, value, index, ...other } = props;
@@ -45,9 +48,12 @@ export default function App() {
           }}>
             <Tab label="Home" />
             <Tab label="About" />
+            <Tab label="Financial Planning" />
             <Tab label="Tax Services" />
+            <Tab label="Michigan Education Savings Plan (529)" />
             <Tab label="Retirement Planning" />
             <Tab label="Other Services" />
+            <Tab label="Contact" />
           </Tabs>
         </Toolbar>
       </AppBar>
@@ -60,13 +66,22 @@ export default function App() {
           <About />
         </TabPanel>
         <TabPanel value={tab} index={2}>
-          <TaxServicesPage />
+          <FinancialPlanning />
         </TabPanel>
         <TabPanel value={tab} index={3}>
-          <RetirementPlanningPage />
+          <TaxServicesPage />
         </TabPanel>
         <TabPanel value={tab} index={4}>
+          <MESP />
+        </TabPanel>
+        <TabPanel value={tab} index={5}>
+          <RetirementPlanningPage />
+        </TabPanel>
+        <TabPanel value={tab} index={6}>
           <OtherServices />
+        </TabPanel>
+        <TabPanel value={tab} index={7}>
+          <Contact />
         </TabPanel>
       </Container>
     </Box>
