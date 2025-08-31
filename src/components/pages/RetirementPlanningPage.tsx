@@ -4,7 +4,7 @@ import UnderConstruction from '../UnderConstruction';
 
 const RetirementPlanningPage: React.FC = () => (
   <Box>
-    
+    <UnderConstruction />
   </Box>
 );
 

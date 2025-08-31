@@ -49,9 +49,9 @@ export default function App() {
             <Tab label="Home" />
             <Tab label="About" />
             <Tab label="Financial Planning" />
+            <Tab label="Retirement Planning" />
             <Tab label="Tax Services" />
             <Tab label="Michigan Education Savings Plan (529)" />
-            <Tab label="Retirement Planning" />
             <Tab label="Other Services" />
             <Tab label="Contact" />
           </Tabs>

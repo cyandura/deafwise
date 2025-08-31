@@ -4,7 +4,7 @@ import UnderConstruction from '../UnderConstruction';
 
 const TaxServicesPage: React.FC = () => (
   <Box>
-    
+    <UnderConstruction />
   </Box>
   
 );

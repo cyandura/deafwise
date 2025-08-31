@@ -4,7 +4,7 @@ import UnderConstruction from '../UnderConstruction';
 
 const OtherServices: React.FC = () => (
   <Box>
-    
+    <UnderConstruction />
   </Box>
   
 );
