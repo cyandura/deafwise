@@ -4,7 +4,7 @@ import UnderConstruction from '../UnderConstruction';
 
 const MESP: React.FC = () => (
   <Box>
-    
+    <UnderConstruction />
   </Box>
   
 );
