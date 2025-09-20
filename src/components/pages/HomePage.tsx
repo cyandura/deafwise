@@ -5,7 +5,7 @@ import UnderConstruction from '../UnderConstruction';
 const HomePage: React.FC = () => (
   <Box>
     <Typography variant="h3" className="tabHeader">
-      Our Services
+      What I Offer
     </Typography>
     <Typography variant="body1" sx={{ mt: 2 }}>
       DeafWise Planning &amp; Taxes is dedicated to empowering you with the knowledge and tools needed to
