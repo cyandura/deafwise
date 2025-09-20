@@ -3,23 +3,16 @@ import { Box, Typography } from '@mui/material';
 
 const TopBanner: React.FC = () => (
   <Box sx={{ 
-    bgcolor: '#8161cc',
-    py: 4, 
+    bgcolor: '#bca0ff',
+    py: 2, 
     textAlign: 'center',
     color: 'white',
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center'
   }}>
-    <Typography variant="h3" component="h1" gutterBottom>
-      DeafWise Planning & Taxes
-    </Typography>
-    <Typography variant="h5" color="error">
-      <a href="mailto:deaftaxlady@gmail.com" style={{ color: 'white', textDecoration: 'none' }}>
-        deaftaxlady@gmail.com
-      </a>
-    </Typography>
+    <img src="images\Deafwise_Planning_Taxes_Square_Logo.png" alt="DeafWise Planning & Taxes" width={300} />
   </Box>
 );
 
