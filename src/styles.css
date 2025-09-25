@@ -29,7 +29,6 @@ body {
     color: #333;
 }
 .content {
-    max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
     line-height: 1.6;
@@ -37,4 +36,8 @@ body {
 
 .tabHeader {
     color: #1A4662
+}
+
+.bodyText {
+    font-size: 1.3rem !important
 }

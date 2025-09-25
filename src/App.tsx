@@ -71,9 +71,8 @@ export default function App() {
     { label: "Financial Planning", index: 2 },
     { label: "Retirement Planning", index: 3 },
     { label: "Tax Services", index: 4 },
-    { label: "Michigan Education Savings Plan (529)", index: 5 },
-    { label: "Other Services", index: 6 },
-    { label: "Contact", index: 7 }
+    { label: "Other Services", index: 5 },
+    { label: "Contact", index: 6 }
   ];
           
 
@@ -121,6 +120,12 @@ export default function App() {
                 alignItems: 'center',
                 backgroundColor: '#8161cc',
                 color: 'white',
+                '& .MuiTab-root': {
+                  fontSize: '1.1rem',
+                  fontWeight: 'bold',
+                  minHeight: '48px',
+                  padding: '12px 24px'
+                }
               }}
             >
               {menuItems.map((item) => (
@@ -166,7 +171,7 @@ export default function App() {
         </List>
       </Drawer>
       {/* Content */}
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <TabPanel value={tab} index={0}>
           <HomePage />
         </TabPanel>
@@ -177,18 +182,15 @@ export default function App() {
           <FinancialPlanning />
         </TabPanel>
         <TabPanel value={tab} index={3}>
-          <TaxServicesPage />
-        </TabPanel>
-        <TabPanel value={tab} index={4}>
-          <MESP />
-        </TabPanel>
-        <TabPanel value={tab} index={5}>
           <RetirementPlanningPage />
         </TabPanel>
-        <TabPanel value={tab} index={6}>
+        <TabPanel value={tab} index={4}>
+          <TaxServicesPage />
+        </TabPanel>
+        <TabPanel value={tab} index={5}>
           <OtherServices />
         </TabPanel>
-        <TabPanel value={tab} index={7}>
+        <TabPanel value={tab} index={6}>
           <Contact />
         </TabPanel>
       </Container>
