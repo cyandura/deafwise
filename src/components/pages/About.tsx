@@ -11,14 +11,37 @@ const About: React.FC = () => (
         <b>My Story</b>
       </Typography>
     </Box>
-    <Box sx={{ display: 'flex', gap: 3, mt: 2 }}>
-      {/* Left side - Image (40%) */}
-      <Box sx={{ flex: '0 0 40%', display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-        <img src="images\deaftaxlady.jpg" alt="Connie" style={{ width: '100%', maxWidth: '400px', height: 'auto' }} />
+    <Box sx={{ 
+      display: 'flex', 
+      gap: 3, 
+      mt: 2,
+      flexDirection: { xs: 'column', md: 'row' } // Stack on mobile, side-by-side on desktop
+    }}>
+      {/* Image - Above text on mobile, left side on desktop */}
+      <Box sx={{ 
+        flex: { xs: 'none', md: '0 0 40%' }, 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'flex-start',
+        order: { xs: 1, md: 1 } // Image first on mobile, first on desktop
+      }}>
+        <Box sx={{ maxWidth: { xs: '250px', md: '400px' } }}>
+          <img 
+            src="images\deaftaxlady.jpg" 
+            alt="Connie" 
+            style={{ 
+              width: '100%', 
+              height: 'auto' 
+            }}
+          />
+        </Box>
       </Box>
       
-      {/* Right side - Content (60%) */}
-      <Box sx={{ flex: '0 0 60%' }}>
+      {/* Content - Below image on mobile, right side on desktop */}
+      <Box sx={{ 
+        flex: { xs: 'none', md: '0 0 60%' },
+        order: { xs: 2, md: 2 } // Content second on mobile, second on desktop
+      }}>
         <Typography className='bodyText' variant="body1">
           I am proud to operate DeafWise Planning & Taxes as a Deaf-owned side business.
           <p/>
