@@ -10,11 +10,14 @@ const OtherServices: React.FC = () => (
       Other Services
     </Typography>
 
-    <Typography className="bodyText" sx={{mb: 2}}>
-        For Senior Citizens:
-        Do you want to join a small training group to learn how to use your iPhone — or is there anything else you’d like to learn together?
-        Let’s talk! Contact me at deaftaxlady@gmail.com.
-    </Typography>
+
+    <Dropdown title="For Senior Citizens">
+      <Typography className="bodyText">
+          Do you want to join a small training group to learn how to use your iPhone — or is there anything else you’d like to learn together?
+          Let’s talk!
+      </Typography>
+    </Dropdown>
+    
 
     <Dropdown title="ASL Consultant Feedback – Test Preparation">
       <Typography  className="bodyText">
@@ -41,7 +44,7 @@ const OtherServices: React.FC = () => (
       <b>What about a PC?</b>
       <ul>
         <li>If you buy an HP or another PC laptop, the main support option is to call the company’s <b>1-800 number</b>.</li>
-        <li>It can be frustrating to go through the automated system before you even reach the right department or alive person.</li>
+        <li>It can be frustrating to go through the automated system before you even reach the right department or a live person.</li>
         <li>Getting repairs or answers often takes longer and feels less personal.</li>
       </ul>
       <p/>
