@@ -9,7 +9,6 @@ import {
   IconButton,
   Drawer,
   List,
-  ListItem,
   ListItemText,
   useTheme,
   useMediaQuery,
@@ -18,14 +17,13 @@ import {
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import TopBanner from './components/TopBanner';
-import HomePage from './components/pages/HomePage';
-import TaxServicesPage from './components/pages/TaxServicesPage';
-import RetirementPlanningPage from './components/pages/RetirementPlanningPage';
-import OtherServices from './components/pages/OtherServices';
-import About from './components/pages/About';
-import FinancialPlanning from './components/pages/FinancialPlanning';
-import MESP from './components/pages/MESP';
-import Contact from './components/pages/Contact';
+import HomePage from './pages/HomePage';
+import TaxServicesPage from './pages/TaxServicesPage';
+import RetirementPlanningPage from './pages/RetirementPlanningPage';
+import OtherServices from './pages/OtherServices';
+import About from './pages/About';
+import FinancialPlanning from './pages/FinancialPlanning';
+import Contact from './pages/Contact';
 
 function TabPanel(props: { children?: React.ReactNode; value: number; index: number }) {
   const { children, value, index, ...other } = props;

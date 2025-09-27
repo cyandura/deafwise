@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';
-import ContactFooter from '../ContactFooter';
+import ContactFooter from '../components/ContactFooter';
 
 const TaxServicesPage: React.FC = () => (
   <Box>
@@ -45,7 +45,6 @@ const TaxServicesPage: React.FC = () => (
         It is your job to keep and share all the papers I need to prepare your taxes.<br/><br/>
         As a tax preparer, I also expect clients to treat me <b>with respect in a professional way.</b> If not, I can stop my service anytime.
       </Box>
-      <br/><br/>
 
       <ContactFooter/>
     </Typography>

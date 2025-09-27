@@ -1,7 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import UnderConstruction from '../UnderConstruction';
-import ContactFooter from '../ContactFooter';
+import ContactFooter from '../components/ContactFooter';
 
 const HomePage: React.FC = () => (
   <Box>
@@ -33,7 +32,11 @@ const HomePage: React.FC = () => (
         <li>✅ Personal safety education for senior citizens</li>
       </ul>
     </Typography>
+    <Typography className='bodyText' sx ={{ mt: 2}}>
+      ✨ <b>All services are offered at affordable rates.</b>
+    </Typography>
     <ContactFooter/>
+    
   </Box>
 );
 

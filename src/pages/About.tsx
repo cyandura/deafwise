@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import ContactFooter from '../ContactFooter';
+import ContactFooter from '../components/ContactFooter';
 
 const About: React.FC = () => (
   <Box>
