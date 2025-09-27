@@ -24,6 +24,7 @@ import OtherServices from './pages/OtherServices';
 import About from './pages/About';
 import FinancialPlanning from './pages/FinancialPlanning';
 import Contact from './pages/Contact';
+import ContactFooter from './components/ContactFooter';
 
 function TabPanel(props: { children?: React.ReactNode; value: number; index: number }) {
   const { children, value, index, ...other } = props;
@@ -75,7 +76,11 @@ export default function App() {
           
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ 
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100vh'
+    }}>
       {/* Banner */}
       <TopBanner />
       
@@ -169,7 +174,8 @@ export default function App() {
         </List>
       </Drawer>
       {/* Content */}
-      <Container maxWidth="lg">
+      <Box sx={{ flex: 1 }}>
+        <Container maxWidth="lg">
         <TabPanel value={tab} index={0}>
           <HomePage />
         </TabPanel>
@@ -191,7 +197,9 @@ export default function App() {
         <TabPanel value={tab} index={6}>
           <Contact />
         </TabPanel>
-      </Container>
+        </Container>
+      </Box>
+      <ContactFooter/>
     </Box>
   );
 } 

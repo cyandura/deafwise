@@ -51,17 +51,6 @@ const OtherServices: React.FC = () => (
       ✅ Conclusion: A Mac laptop is often the better choice if you want <b>easy, local, face-to-face support</b> in addition to quality performance.
       </Typography>
     </Dropdown>
-   
-    
-
-    
-
-    <Typography>
-      
-      
-    </Typography>
-
-    <ContactFooter/>
   </Box>
   
 );

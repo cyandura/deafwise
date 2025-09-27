@@ -1,13 +1,12 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import WarningIcon from '@mui/icons-material/Warning';
-import ContactFooter from '../components/ContactFooter';
 
 const TaxServicesPage: React.FC = () => (
   <Box>
     <Typography >
       <Typography variant="h3" className="tabHeader">
-        Let’s Talk About Your Income Tax Preparation
+        Let's Talk About Your Income Tax Preparation
       </Typography>
       <Typography className='bodyText'>
         I have <b>over 25 years of experience</b> preparing individual income tax returns.<br/>
@@ -45,8 +44,6 @@ const TaxServicesPage: React.FC = () => (
         It is your job to keep and share all the papers I need to prepare your taxes.<br/><br/>
         As a tax preparer, I also expect clients to treat me <b>with respect in a professional way.</b> If not, I can stop my service anytime.
       </Box>
-
-      <ContactFooter/>
     </Typography>
   </Box>
   
