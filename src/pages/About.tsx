@@ -34,7 +34,7 @@ const About: React.FC = () => (
               height: 'auto' 
             }}
           />
-          <Typography variant="subtitle1">
+          <Typography variant="subtitle1" sx={{display: 'flex', justifyContent: 'center'}}>
             Connie Tincknell-Yandura
           </Typography>
         </Box>
