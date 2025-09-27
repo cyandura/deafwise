@@ -1,17 +1,15 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import UnderConstruction from '../components/UnderConstruction';
-import ContactFooter from '../components/ContactFooter';
 
 const RetirementPlanningPage: React.FC = () => (
   <Box>
     <Typography>
     <Typography variant="h3" className="tabHeader">
-      Let’s Talk About Your Pre-Retirement Plan
+      Let's Talk About Your Pre-Retirement Plan
     </Typography >
     
       <Typography className='bodyText'>
-        It’s never too late to learn and make plans for your future.
+        It's never too late to learn and make plans for your future.
         Do you have…
         <ul style={{ listStyle: 'none' }}>
           <li>✅ A Traditional IRA (through work or personal account)?</li>
@@ -29,13 +27,8 @@ const RetirementPlanningPage: React.FC = () => (
           <li>✅ Moving to a warmer climate (like Florida or Arizona) for your health?</li>
           <li>✅ Selling your house and moving to a smaller home?</li>
         </ul>
-
       </Typography>
-    
-      <ContactFooter/>
-
     </Typography>
-
   </Box>
 );
 

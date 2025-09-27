@@ -1,5 +1,4 @@
 import React from 'react';
-import ContactFooter from '../components/ContactFooter';
 import { Box, Typography } from '@mui/material';
 
 const FinancialPlanning: React.FC = () => (
@@ -28,7 +27,6 @@ const FinancialPlanning: React.FC = () => (
     <Typography className='bodyText' sx={{ my: 2 }}>
       💡 <b>If your question is not on the list — ask me!</b> I will do my best to help.
     </Typography>
-    <ContactFooter/>
   </Box>
 );
 
