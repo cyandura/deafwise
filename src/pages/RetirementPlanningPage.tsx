@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import UnderConstruction from '../UnderConstruction';
-import ContactFooter from '../ContactFooter';
+import UnderConstruction from '../components/UnderConstruction';
+import ContactFooter from '../components/ContactFooter';
 
 const RetirementPlanningPage: React.FC = () => (
   <Box>
