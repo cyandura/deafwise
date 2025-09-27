@@ -16,7 +16,10 @@ const ContactFooter: React.FC = () => (
       📩 Let's talk!
       We can set up a time to discuss your plan, 
       feel free to contact me by email: <a href="mailto:deaftaxlady@gmail.com" style={{ color: 'white' }}>deaftaxlady@gmail.com</a>
-      <br/>  All rights reserved.<br/> DeafWise Planning & Taxes ®
+      <Typography>
+      <br/> DeafWise Planning & Taxes® 2025<br/> Website by Cody Yandura
+
+      </Typography>
     </Typography>
   </Box>
 );
