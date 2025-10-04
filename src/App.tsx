@@ -25,6 +25,7 @@ import About from './pages/About';
 import FinancialPlanning from './pages/FinancialPlanning';
 import Contact from './pages/Contact';
 import ContactFooter from './components/ContactFooter';
+import AccessibilityMenu from './components/AccessibilityMenu';
 
 function TabPanel(props: { children?: React.ReactNode; value: number; index: number }) {
   const { children, value, index, ...other } = props;
@@ -200,6 +201,7 @@ export default function App() {
         </Container>
       </Box>
       <ContactFooter/>
+      <AccessibilityMenu />
     </Box>
   );
 } 
