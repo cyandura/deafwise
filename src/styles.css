@@ -42,3 +42,198 @@ body {
 .bodyText {
     font-size: 1.3rem !important
 }
+
+/* Accessibility Styles */
+
+/* Bigger Text */
+.accessibility-bigger-text {
+    font-size: var(--accessibility-font-size, 1.3rem) !important;
+}
+
+/* High Contrast Mode */
+.accessibility-high-contrast {
+    filter: contrast(120%);
+}
+
+/* Apply high contrast to main content areas only */
+.accessibility-high-contrast .content,
+.accessibility-high-contrast .banner,
+.accessibility-high-contrast .tabHeader,
+.accessibility-high-contrast .bodyText,
+.accessibility-high-contrast p,
+.accessibility-high-contrast h1,
+.accessibility-high-contrast h2,
+.accessibility-high-contrast h3,
+.accessibility-high-contrast h4,
+.accessibility-high-contrast h5,
+.accessibility-high-contrast h6,
+.accessibility-high-contrast div:not(.MuiMenu-root):not(.MuiMenu-paper):not(.MuiMenuItem-root):not(.MuiSwitch-root):not(.MuiSlider-root):not(.MuiChip-root):not(.MuiFormControlLabel-root):not(.MuiTypography-root):not(.MuiDivider-root):not(.MuiIconButton-root):not(.MuiBackdrop-root):not(.MuiModal-root) {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Ensure backdrop and modal elements are not affected by high contrast */
+.accessibility-high-contrast .MuiBackdrop-root {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.accessibility-high-contrast .MuiModal-root {
+    background-color: transparent !important;
+}
+
+/* Keep navigation elements visible */
+.accessibility-high-contrast .MuiAppBar-root {
+    background-color: black !important;
+    color: white !important;
+}
+
+.accessibility-high-contrast .MuiTabs-root {
+    background-color: black !important;
+    color: white !important;
+}
+
+.accessibility-high-contrast .MuiTab-root {
+    color: black !important;
+}
+
+.accessibility-high-contrast .MuiTab-root.Mui-selected {
+    color: black !important;
+    background-color: rgb(224 224 224) !important;
+}
+
+/* Keep buttons visible */
+.accessibility-high-contrast .MuiButton-root {
+    background-color: black !important;
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.accessibility-high-contrast .MuiButton-root:hover {
+    background-color: white !important;
+    color: black !important;
+}
+
+/* Keep accessibility menu completely unaffected */
+.accessibility-high-contrast .MuiMenu-paper {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+}
+
+.accessibility-high-contrast .MuiMenuItem-root {
+    background-color: white !important;
+    color: black !important;
+}
+
+.accessibility-high-contrast .MuiMenuItem-root:hover {
+    background-color: #f5f5f5 !important;
+    color: black !important;
+}
+
+.accessibility-high-contrast .MuiSwitch-root .MuiSwitch-switchBase.Mui-checked {
+    background-color: #8161cc !important;
+    color: white !important;
+}
+
+.accessibility-high-contrast .MuiSwitch-root .MuiSwitch-switchBase {
+    background-color: #ccc !important;
+    color: white !important;
+}
+
+.accessibility-high-contrast .MuiSlider-root .MuiSlider-track {
+    background-color: #8161cc !important;
+}
+
+.accessibility-high-contrast .MuiSlider-root .MuiSlider-thumb {
+    background-color: #8161cc !important;
+    border: 2px solid white !important;
+}
+
+.accessibility-high-contrast .MuiChip-root {
+    background-color: #8161cc !important;
+    color: white !important;
+}
+
+.accessibility-high-contrast .MuiFormControlLabel-label {
+    color: black !important;
+}
+
+.accessibility-high-contrast .MuiTypography-root {
+    color: black !important;
+}
+
+.accessibility-high-contrast .MuiDivider-root {
+    background-color: #ccc !important;
+}
+
+.accessibility-high-contrast .MuiIconButton-root {
+    background-color: #8161cc !important;
+    color: white !important;
+}
+
+.accessibility-high-contrast .MuiIconButton-root:hover {
+    background-color: #6a4f9f !important;
+}
+
+/* Highlight Links */
+.accessibility-highlight-links a {
+    background-color: yellow !important;
+    color: black !important;
+    padding: 2px 4px !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+}
+
+.accessibility-highlight-links a:hover {
+    background-color: orange !important;
+}
+
+/* Text Spacing */
+.accessibility-text-spacing {
+    line-height: var(--accessibility-text-spacing, 1rem) !important;
+}
+
+.accessibility-text-spacing * {
+    line-height: inherit !important;
+}
+
+/* Ensure accessibility menu is always visible */
+.accessibility-menu-button {
+    position: fixed !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    z-index: 1000 !important;
+}
+
+/* Ensure page content remains visible when menu is open in high contrast mode */
+.accessibility-high-contrast .MuiBackdrop-root {
+    pointer-events: auto !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.accessibility-high-contrast .MuiMenu-root {
+    pointer-events: auto !important;
+}
+
+/* Prevent high contrast from affecting the main page container */
+.accessibility-high-contrast .MuiContainer-root {
+    background-color: transparent !important;
+}
+
+.accessibility-high-contrast .MuiBox-root {
+    background-color: transparent !important;
+}
+
+/* Ensure main page content areas are protected */
+.accessibility-high-contrast .MuiBox-root:has(.MuiContainer-root) {
+    background-color: transparent !important;
+}
+
+.accessibility-high-contrast .MuiBox-root:has(.MuiTabPanel-root) {
+    background-color: transparent !important;
+}
+
+/* Additional protection for content areas */
+.accessibility-high-contrast [role="tabpanel"] {
+    background-color: transparent !important;
+}
