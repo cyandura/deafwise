@@ -43,6 +43,9 @@ body {
     font-size: 1.3rem !important
 }
 
+.MuiSlider-markLabel{
+    padding: 0px 10px
+}
 /* Accessibility Styles */
 
 /* Bigger Text */
@@ -68,8 +71,8 @@ body {
 .accessibility-high-contrast h5,
 .accessibility-high-contrast h6,
 .accessibility-high-contrast div:not(.MuiMenu-root):not(.MuiMenu-paper):not(.MuiMenuItem-root):not(.MuiSwitch-root):not(.MuiSlider-root):not(.MuiChip-root):not(.MuiFormControlLabel-root):not(.MuiTypography-root):not(.MuiDivider-root):not(.MuiIconButton-root):not(.MuiBackdrop-root):not(.MuiModal-root) {
-    background-color: white !important;
-    color: black !important;
+    background-color: #000 !important;
+    color: #fff !important;
 }
 
 /* Ensure backdrop and modal elements are not affected by high contrast */
@@ -93,12 +96,12 @@ body {
 }
 
 .accessibility-high-contrast .MuiTab-root {
-    color: black !important;
+    color: white !important;
 }
 
 .accessibility-high-contrast .MuiTab-root.Mui-selected {
-    color: black !important;
-    background-color: rgb(224 224 224) !important;
+    color: white !important;
+    background-color: #333 !important;
 }
 
 /* Keep buttons visible */
@@ -144,6 +147,11 @@ body {
     background-color: #8161cc !important;
 }
 
+.accessibility-high-contrast .MuiSlider-markLabel {
+    color: white !important;
+    background-color: black !important;
+}
+
 .accessibility-high-contrast .MuiSlider-root .MuiSlider-thumb {
     background-color: #8161cc !important;
     border: 2px solid white !important;
@@ -155,15 +163,15 @@ body {
 }
 
 .accessibility-high-contrast .MuiFormControlLabel-label {
-    color: black !important;
+    color: white !important;
 }
 
 .accessibility-high-contrast .MuiTypography-root {
-    color: black !important;
+    color: white !important;
 }
 
 .accessibility-high-contrast .MuiDivider-root {
-    background-color: #ccc !important;
+    background-color: #444 !important;
 }
 
 .accessibility-high-contrast .MuiIconButton-root {
