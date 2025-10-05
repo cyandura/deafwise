@@ -168,9 +168,10 @@ const AccessibilityMenu: React.FC = () => {
           sx: {
             width: 400,
             maxHeight: '80vh',
-            overflow: 'auto',
+            overflowY: 'auto',
+            overflowX: 'off',
             zIndex: 1300,
-            px: 3
+            px: 1
           }
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'bottom' }}
@@ -229,9 +230,9 @@ const AccessibilityMenu: React.FC = () => {
                 max={200}
                 step={10}
                 marks={[
-                  { value: 100, label: '100%' },
+                  { value: 105, label: '100%' },
                   { value: 150, label: '150%' },
-                  { value: 200, label: '200%' }
+                  { value: 195, label: '200%' }
                 ]}
                 valueLabelDisplay="auto"
               />
