@@ -70,10 +70,10 @@ export default function App() {
     { label: "Home", index: 0 },
     { label: "About", index: 1 },
     { label: "Financial Planning", index: 2 },
+    { label: "FAQ", index: 6 },
     { label: "Retirement Planning", index: 3 },
     { label: "Tax Services", index: 4 },
     { label: "Other Services", index: 5 },
-    { label: "FAQ", index: 6 },
     { label: "Contact", index: 7 }
   ];
           
@@ -188,6 +188,9 @@ export default function App() {
         <TabPanel value={tab} index={2}>
           <FinancialPlanning />
         </TabPanel>
+        <TabPanel value={tab} index={6}>
+          <FAQ />
+        </TabPanel>
         <TabPanel value={tab} index={3}>
           <RetirementPlanningPage />
         </TabPanel>
@@ -196,9 +199,6 @@ export default function App() {
         </TabPanel>
         <TabPanel value={tab} index={5}>
           <OtherServices />
-        </TabPanel>
-        <TabPanel value={tab} index={6}>
-          <FAQ />
         </TabPanel>
         <TabPanel value={tab} index={7}>
           <Contact />
