@@ -26,6 +26,7 @@ import FinancialPlanning from './pages/FinancialPlanning';
 import Contact from './pages/Contact';
 import ContactFooter from './components/ContactFooter';
 import AccessibilityMenu from './components/AccessibilityMenu';
+import FAQ from './pages/FAQ';
 
 function TabPanel(props: { children?: React.ReactNode; value: number; index: number }) {
   const { children, value, index, ...other } = props;
@@ -72,7 +73,8 @@ export default function App() {
     { label: "Retirement Planning", index: 3 },
     { label: "Tax Services", index: 4 },
     { label: "Other Services", index: 5 },
-    { label: "Contact", index: 6 }
+    { label: "FAQ", index: 6 },
+    { label: "Contact", index: 7 }
   ];
           
 
@@ -196,6 +198,9 @@ export default function App() {
           <OtherServices />
         </TabPanel>
         <TabPanel value={tab} index={6}>
+          <FAQ />
+        </TabPanel>
+        <TabPanel value={tab} index={7}>
           <Contact />
         </TabPanel>
         </Container>
