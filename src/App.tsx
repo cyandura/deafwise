@@ -70,10 +70,10 @@ export default function App() {
     { label: "Home", index: 0 },
     { label: "About", index: 1 },
     { label: "Financial Planning", index: 2 },
-    { label: "FAQ", index: 6 },
-    { label: "Retirement Planning", index: 3 },
-    { label: "Tax Services", index: 4 },
-    { label: "Other Services", index: 5 },
+    { label: "FAQ", index: 3 },
+    { label: "Retirement Planning", index: 4 },
+    { label: "Tax Services", index: 5 },
+    { label: "Other Services", index: 6 },
     { label: "Contact", index: 7 }
   ];
           
@@ -188,16 +188,16 @@ export default function App() {
         <TabPanel value={tab} index={2}>
           <FinancialPlanning />
         </TabPanel>
-        <TabPanel value={tab} index={6}>
+        <TabPanel value={tab} index={3}>
           <FAQ />
         </TabPanel>
-        <TabPanel value={tab} index={3}>
+        <TabPanel value={tab} index={4}>
           <RetirementPlanningPage />
         </TabPanel>
-        <TabPanel value={tab} index={4}>
+        <TabPanel value={tab} index={5}>
           <TaxServicesPage />
         </TabPanel>
-        <TabPanel value={tab} index={5}>
+        <TabPanel value={tab} index={6}>
           <OtherServices />
         </TabPanel>
         <TabPanel value={tab} index={7}>
