@@ -80,7 +80,7 @@ const FAQ: React.FC = () => (
     </Dropdown>
     <Dropdown title="Do you check your annual free credit report every year?">
       <Typography  className="bodyText">
-        <a href="https://www.annualcreditreport.com/index.action">https://www.annualcreditreport.com/index.action</a>
+        <a href="https://www.annualcreditreport.com/index.action" target="_blank" rel="noopener noreferrer">https://www.annualcreditreport.com/index.action</a>
         <p/>
         You should!  Make sure all your creditors (Macy’s, Visa, car loan, Discover, etc.) are correct. 
         This helps protect you—so no one is using your SSN# and your good credit to get approved for things like a car loan.
