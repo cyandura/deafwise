@@ -47,7 +47,7 @@ export default function App() {
   const [tab, setTab] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down(1300));
+  const isMobile = useMediaQuery(theme.breakpoints.down(1400));
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setTab(newValue);
@@ -151,7 +151,7 @@ export default function App() {
           keepMounted: true,
         }}
         sx={{
-          display: { xs: 'block', [theme.breakpoints.up(1300)]: 'none' },
+          display: { xs: 'block', [theme.breakpoints.up(1400)]: 'none' },
           '& .MuiDrawer-paper': { 
             boxSizing: 'border-box', 
             width: 240,
