@@ -53,6 +53,8 @@ const About: React.FC = () => (
           <p/>
           I worked at <b>Oakland Community College for four years</b>—serving as an <b>ASL Tutor for four years</b> and an <b>Accounting Tutor for two years.</b>
           <p/>
+          I worked as a substitute teacher with a Michigan substitute permit in public schools across Macomb and Oakland counties from October 2015 through June 2016. This included <b>teaching ASL classes</b> as a substitute at two public schools.
+          <p/>
           My professional experience includes working at <b>H&R Block</b> for two years (1999–2000) and serving as a <b>Volunteer Income Tax Assistance (VITA)</b> preparer for seven years—one year in Pontiac, MI, and six years in Indianapolis, IN. In addition, I have provided <b>income tax preparation for family members and Deaf taxpayers for over 25 years.</b>
           <p/>
           I am passionate about helping and educating the Deaf community on <b>income taxes, unclaimed property, retirement planning, and many other financial topics.</b> I have supported Deaf clients across Michigan, Indiana, and beyond.

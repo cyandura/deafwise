@@ -26,6 +26,7 @@ import FinancialPlanning from './pages/FinancialPlanning';
 import Contact from './pages/Contact';
 import ContactFooter from './components/ContactFooter';
 import AccessibilityMenu from './components/AccessibilityMenu';
+import FAQ from './pages/FAQ';
 
 function TabPanel(props: { children?: React.ReactNode; value: number; index: number }) {
   const { children, value, index, ...other } = props;
@@ -46,7 +47,7 @@ export default function App() {
   const [tab, setTab] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down(1300));
+  const isMobile = useMediaQuery(theme.breakpoints.down(1400));
 
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setTab(newValue);
@@ -69,10 +70,11 @@ export default function App() {
     { label: "Home", index: 0 },
     { label: "About", index: 1 },
     { label: "Financial Planning", index: 2 },
-    { label: "Retirement Planning", index: 3 },
-    { label: "Tax Services", index: 4 },
-    { label: "Other Services", index: 5 },
-    { label: "Contact", index: 6 }
+    { label: "FAQ", index: 3 },
+    { label: "Retirement Planning", index: 4 },
+    { label: "Tax Services", index: 5 },
+    { label: "Other Services", index: 6 },
+    { label: "Contact", index: 7 }
   ];
           
 
@@ -149,7 +151,7 @@ export default function App() {
           keepMounted: true,
         }}
         sx={{
-          display: { xs: 'block', [theme.breakpoints.up(1300)]: 'none' },
+          display: { xs: 'block', [theme.breakpoints.up(1400)]: 'none' },
           '& .MuiDrawer-paper': { 
             boxSizing: 'border-box', 
             width: 240,
@@ -187,15 +189,18 @@ export default function App() {
           <FinancialPlanning />
         </TabPanel>
         <TabPanel value={tab} index={3}>
-          <RetirementPlanningPage />
+          <FAQ />
         </TabPanel>
         <TabPanel value={tab} index={4}>
-          <TaxServicesPage />
+          <RetirementPlanningPage />
         </TabPanel>
         <TabPanel value={tab} index={5}>
-          <OtherServices />
+          <TaxServicesPage />
         </TabPanel>
         <TabPanel value={tab} index={6}>
+          <OtherServices />
+        </TabPanel>
+        <TabPanel value={tab} index={7}>
           <Contact />
         </TabPanel>
         </Container>
