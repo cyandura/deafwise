@@ -60,7 +60,7 @@ const FAQ: React.FC = () => (
     <Dropdown title="Do you get a 1099-C (Cancellation of Debt)? 👉 Do you know what that means?">
       <Typography  className="bodyText">
         It means you worked with your credit card company or another creditor to close your account. 
-        But — the amount you no longer owe becomes taxable income on your tax return for that year.
+        But — the amount you no longer owe becomes <b>"taxable"</b> income on your tax return for that year.
       </Typography>
     </Dropdown>
     <Dropdown title="Do you know your Credit Score?">
