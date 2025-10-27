@@ -67,14 +67,14 @@ export default function App() {
 
 
   const menuItems = [
-    { label: "Home", index: 0 },
-    { label: "About", index: 1 },
-    { label: "Financial Planning", index: 2 },
-    { label: "FAQ", index: 3 },
-    { label: "Retirement Planning", index: 4 },
-    { label: "Tax Services", index: 5 },
-    { label: "Other Services", index: 6 },
-    { label: "Contact", index: 7 }
+    { label: "Home", index: 0, component: <HomePage/> },
+    { label: "About", index: 1, component: <About/> },
+    { label: "Financial Planning", index: 2, component: <FinancialPlanning/> },
+    { label: "FAQ", index: 3, component: <FAQ/> },
+    { label: "Retirement Planning", index: 4, component: <RetirementPlanningPage/> },
+    { label: "Tax Services", index: 5, component: <TaxServicesPage/> },
+    { label: "Other Services", index: 6, component: <OtherServices/> },
+    { label: "Contact", index: 7, component: <Contact/> }
   ];
           
 
@@ -179,30 +179,12 @@ export default function App() {
       {/* Content */}
       <Box sx={{ flex: 1 }}>
         <Container maxWidth="lg">
-        <TabPanel value={tab} index={0}>
-          <HomePage />
-        </TabPanel>
-        <TabPanel value={tab} index={1}>
-          <About />
-        </TabPanel>
-        <TabPanel value={tab} index={2}>
-          <FinancialPlanning />
-        </TabPanel>
-        <TabPanel value={tab} index={3}>
-          <FAQ />
-        </TabPanel>
-        <TabPanel value={tab} index={4}>
-          <RetirementPlanningPage />
-        </TabPanel>
-        <TabPanel value={tab} index={5}>
-          <TaxServicesPage />
-        </TabPanel>
-        <TabPanel value={tab} index={6}>
-          <OtherServices />
-        </TabPanel>
-        <TabPanel value={tab} index={7}>
-          <Contact />
-        </TabPanel>
+        { menuItems.map((item) => (
+              <TabPanel value={tab} index={item.index}>
+                {item.component}
+              </TabPanel>
+            ))
+        }
         </Container>
       </Box>
       <ContactFooter/>
