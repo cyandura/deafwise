@@ -12,7 +12,7 @@ const TopBanner: React.FC = () => (
     alignItems: 'center',
     justifyContent: 'center'
   }}>
-    <img src="images/DeafWiseEdited.png" alt="DeafWise Planning & Taxes" width={400} />
+    <img src="images/DeafWiseEdited.png" alt="DeafWise Planning & Taxes" width={450} />
   </Box>
 );
 
