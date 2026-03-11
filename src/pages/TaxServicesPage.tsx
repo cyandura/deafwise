@@ -28,7 +28,7 @@ const TaxServicesPage: React.FC = () => (
 
 
       <Box className='bodyText' sx={{ 
-        border: '2px solid #8161cc', 
+        border: '2px solid var(--primary)', 
         borderRadius: '8px', 
         padding: '16px', 
         margin: '16px 0',
