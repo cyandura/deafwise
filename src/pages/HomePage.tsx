@@ -16,7 +16,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="hero-inner">
           <div className="logo-badge">
             <div className="logo-circle">
-              <img src="images/DeafWiseEditedDarkerGreen.png" alt="DeafWise Logo" />
+              <img src="images/LogoNoText.png" alt="DeafWise Logo" />
             </div>
           </div>
           <div className="hero-text">
@@ -111,10 +111,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          <div className="affordable-banner">
-            <span>✨</span>
-            <p>All services are offered at affordable rates.</p>
-          </div>
+          
         </div>
 
         {/* RIGHT: Sidebar */}
@@ -133,7 +130,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           {/* Stats */}
           <div className="stats-card">
             <div className="stat">
-              <div className="stat-num">16+</div>
+              <div className="stat-num">4+</div>
               <div className="stat-label">Services</div>
             </div>
             <div className="stat">
@@ -142,7 +139,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             </div>
             <div className="stat">
               <div className="stat-num">MI</div>
-              <div className="stat-label">Michigan</div>
+              <div className="stat-label">Michigan Based</div>
             </div>
             <div className="stat">
               <div className="stat-num">★</div>
@@ -161,6 +158,10 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
               <button className="quick-link" onClick={() => handleQuickLink(3)}>FAQ</button>
               <button className="quick-link" onClick={() => handleQuickLink(7)}>Contact</button>
             </div>
+          </div>
+          <div className="affordable-banner">
+            <span>✨</span>
+            <p>All services are offered at affordable rates.</p>
           </div>
         </aside>
       </main>

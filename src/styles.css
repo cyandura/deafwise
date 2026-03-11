@@ -134,15 +134,11 @@ body {
   gap: 12px;
 }
 .logo-circle {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.12);
-  border: 2px solid rgba(255,255,255,0.3);
+  width: 300px;
+  height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
   overflow: hidden;
 }
 .logo-circle img {
@@ -168,7 +164,7 @@ body {
   text-transform: uppercase;
 }
 .hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(42px, 5vw, 72px);
   font-weight: 900;
   line-height: 1.05;
@@ -236,7 +232,7 @@ body {
   border-radius: 2px;
 }
 .section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: clamp(32px, 3.5vw, 48px);
   font-weight: 700;
   line-height: 1.1;
@@ -264,7 +260,7 @@ body {
   border-radius: 20px;
   padding: 18px 20px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 14px;
   transition: all 0.25s;
   position: relative;
@@ -354,7 +350,7 @@ body {
   margin-bottom: 12px;
 }
 .contact-card h3 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
@@ -406,7 +402,7 @@ body {
 }
 .stat { text-align: center; }
 .stat-num {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 36px;
   font-weight: 900;
   background: linear-gradient(135deg, var(--purple-mid), var(--green-vivid));
