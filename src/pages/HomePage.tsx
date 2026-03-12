@@ -16,12 +16,12 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div className="hero-inner">
           <div className="logo-badge">
             <div className="logo-circle">
-              <img src="images/LogoNoText.png" alt="DeafWise Logo" />
+              <img src="images/LogoSVG.svg" alt="DeafWise Logo" />
             </div>
           </div>
           <div className="hero-text">
             <div className="hero-eyebrow">Financial Empowerment</div>
-            <h1 className="hero-title">DeafWise<br /><span>Planning</span> &amp; Taxes</h1>
+            <h1 className="hero-title">DeafWise<br />Planning &amp; Taxes</h1>
             <p className="hero-sub">
               Dedicated to empowering you with the knowledge and tools to manage your finances effectively — at affordable rates.
             </p>
