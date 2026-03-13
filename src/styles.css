@@ -383,20 +383,14 @@ b {
 
 /* Contact card */
 .contact-card {
-  background: linear-gradient(145deg, var(--dark), var(--contact-end));
+  background:
+    radial-gradient(ellipse 850px 600px at 100% 100%, rgba(168,85,247,0.25) 25%, transparent 65%),
+    linear-gradient(145deg, var(--dark) 0%, #2e1055 30%, var(--contact-end) 60%, #4a1d8a 100%);
   border-radius: 28px;
   padding: 36px 32px;
   color: #fff;
   position: relative;
   overflow: hidden;
-}
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: -40px; right: -40px;
-  width: 200px; height: 200px;
-  background: radial-gradient(circle, rgba(var(--green-vivid-rgb),0.25), transparent 70%);
-  border-radius: 50%;
 }
 .contact-card-label {
   font-size: 0.6875rem;
