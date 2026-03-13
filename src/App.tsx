@@ -26,6 +26,7 @@ function TabPanel(props: { children?: React.ReactNode; value: number; index: num
   return (
     <div
       role="tabpanel"
+      className="content-box"
       hidden={value !== index}
       id={`tabpanel-${index}`}
       aria-labelledby={`tab-${index}`}

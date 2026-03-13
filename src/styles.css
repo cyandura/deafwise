@@ -46,6 +46,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
 }
+
+.content-box{
+  border-top: 56px solid var(--purple-darker);
+  margin-top: -56px;
+}
+
 /* —— NAV —— */
 .main-nav {
   position: sticky;
