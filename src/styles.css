@@ -543,9 +543,12 @@ body {
 }
 .tabHeader {
   color: #1A4662;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 26px;
 }
 .bodyText {
   font-size: 1.3rem !important;
+  font-family: 'Roboto', sans-serif;
 }
 .MuiSlider-markLabel {
   padding: 0px 10px;

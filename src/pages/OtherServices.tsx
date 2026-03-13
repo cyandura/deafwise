@@ -6,11 +6,12 @@ import Dropdown from '../components/Dropdown';
 const OtherServices: React.FC = () => (
   <Box>
 
-    <Typography variant="h3" className="tabHeader" sx={{mb:2}}>
-      Other Services
-    </Typography>
-
-
+    <div className="tabHeader">
+      <Typography variant="h3" sx={{mb:2}}>
+        Other Services
+      </Typography>
+    </div>
+    
     <Dropdown title="For Senior Citizens">
       <Typography className="bodyText">
           Do you want to join a small training group to learn how to use your iPhone — or is there anything else you’d like to learn together?

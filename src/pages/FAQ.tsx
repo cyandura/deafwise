@@ -5,9 +5,11 @@ import Dropdown from '../components/Dropdown';
 const FAQ: React.FC = () => (
   <Box>
 
-    <Typography variant="h3" className="tabHeader" sx={{mb:2}}>
-      Frequently Asked Questions
-    </Typography>
+    <div className="tabHeader">
+      <Typography variant="h3" >
+        Frequently Asked Questions
+      </Typography>
+    </div>
 
 
     <Dropdown title="Are you ready to retire? Have you done your research and planning at least 10 years in advance? Why or why not?">

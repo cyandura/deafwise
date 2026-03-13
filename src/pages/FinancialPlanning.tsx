@@ -3,9 +3,14 @@ import { Box, Typography } from '@mui/material';
 
 const FinancialPlanning: React.FC = () => (
   <Box>
-    <Typography variant="h3" className="tabHeader">
-      Let's Talk About Your Financial Planning
-    </Typography>
+
+    <div className="tabHeader">
+      <Typography variant="h3">
+        Let's Talk About Your Financial Planning
+      </Typography>
+    </div>
+
+    
     
     <Typography className='bodyText' sx={{ mt: 2 }}>
       I offer <b>financial planning services</b> to support the Deaf community with everyday money decisions. Together, we can look at:
