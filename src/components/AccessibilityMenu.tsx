@@ -18,8 +18,7 @@ import {
   Contrast as ContrastIcon,
   Link as LinkIcon,
   FormatLineSpacing as SpacingIcon,
-  Close as CloseIcon,
-  Settings as SettingsIcon
+  Close as CloseIcon
 } from '@mui/icons-material';
 
 interface AccessibilitySettings {
@@ -54,13 +53,11 @@ const AccessibilityMenu: React.FC = () => {
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
-    // Apply bigger text
+    // Scale root font-size — all rem-based sizes (custom CSS + MUI) scale with it
     if (newSettings.biggerText) {
-      root.style.setProperty('--accessibility-font-size', `${newSettings.fontSize}%`);
-      root.classList.add('accessibility-bigger-text');
+      root.style.fontSize = `${newSettings.fontSize}%`;
     } else {
-      root.style.removeProperty('--accessibility-font-size');
-      root.classList.remove('accessibility-bigger-text');
+      root.style.fontSize = '';
     }
 
     // Apply high contrast
@@ -152,11 +149,7 @@ const AccessibilityMenu: React.FC = () => {
           }}
           aria-label="Open accessibility menu"
         >
-          {settings.biggerText || settings.highContrast || settings.highlightLinks ? (
-            <SettingsIcon />
-          ) : (
-            <AccessibilityIcon />
-          )}
+          <AccessibilityIcon />
         </IconButton>
       </Tooltip>
 
