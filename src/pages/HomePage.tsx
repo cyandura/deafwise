@@ -1,13 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-interface HomePageProps {
-  onNavigate?: (tabIndex: number) => void;
-}
-
-const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
-  const handleQuickLink = (index: number) => {
-    if (onNavigate) onNavigate(index);
-  };
+const HomePage: React.FC = () => {
 
   return (
     <>
@@ -38,7 +32,7 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
         <div>
           <div className="section-header">
             <div className="section-tag">What I Offer</div>
-            <h2 className="section-title">Services designed to<br /><em>empower your finances</em></h2>
+            <h2 className="section-title">Services Designed To<br /><em>Empower Your Finances</em></h2>
             <p className="section-intro">
               DeafWise Planning &amp; Taxes — I am dedicated to empowering you with the knowledge and tools to manage your finances effectively. I can help you with:
             </p>
@@ -151,12 +145,12 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           <div className="quick-links">
             <h4>Quick Links</h4>
             <div className="quick-links-grid">
-              <button className="quick-link" onClick={() => handleQuickLink(1)}>About</button>
-              <button className="quick-link" onClick={() => handleQuickLink(2)}>Financial</button>
-              <button className="quick-link" onClick={() => handleQuickLink(4)}>Retirement</button>
-              <button className="quick-link" onClick={() => handleQuickLink(5)}>Tax Services</button>
-              <button className="quick-link" onClick={() => handleQuickLink(3)}>FAQ</button>
-              <button className="quick-link" onClick={() => handleQuickLink(7)}>Contact</button>
+              <Link className="quick-link" to="/about">About</Link>
+              <Link className="quick-link" to="/financial-planning">Financial</Link>
+              <Link className="quick-link" to="/retirement-planning">Retirement</Link>
+              <Link className="quick-link" to="/tax-services">Tax Services</Link>
+              <Link className="quick-link" to="/faq">FAQ</Link>
+              <Link className="quick-link" to="/contact">Contact</Link>
             </div>
           </div>
           <div className="affordable-banner">

@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   Box,
-  Container,
   Drawer,
   List,
   ListItemText,
@@ -10,6 +9,7 @@ import {
   ListItemButton
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Routes, Route, Link, useLocation } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import TaxServicesPage from './pages/TaxServicesPage';
 import RetirementPlanningPage from './pages/RetirementPlanningPage';
@@ -21,71 +21,57 @@ import ContactFooter from './components/ContactFooter';
 import AccessibilityMenu from './components/AccessibilityMenu';
 import FAQ from './pages/FAQ';
 
-function TabPanel(props: { children?: React.ReactNode; value: number; index: number }) {
-  const { children, value, index, ...other } = props;
-  return (
-    <div
-      role="tabpanel"
-      className="content-box"
-      hidden={value !== index}
-      id={`tabpanel-${index}`}
-      aria-labelledby={`tab-${index}`}
-      {...other}
-    >
-      {value === index && <>{children}</>}
-    </div>
-  );
-}
+const menuItems = [
+  { label: "Home", path: "/" },
+  { label: "About", path: "/about" },
+  { label: "Financial Planning", path: "/financial-planning" },
+  { label: "FAQ", path: "/faq" },
+  { label: "Retirement Planning", path: "/retirement-planning" },
+  { label: "Tax Services", path: "/tax-services" },
+  { label: "Other Services", path: "/other-services" },
+  { label: "Contact", path: "/contact" },
+];
 
 export default function App() {
-  const [tab, setTab] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down(900));
+  const location = useLocation();
 
-  const handleNavigate = (newValue: number) => {
-    setTab(newValue);
+  const currentItem = menuItems.find(item => item.path === location.pathname) || menuItems[0];
+
+  const handleNav = () => {
     setDrawerOpen(false);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const menuItems = [
-    { label: "Home", index: 0 },
-    { label: "About", index: 1 },
-    { label: "Financial Planning", index: 2 },
-    { label: "FAQ", index: 3 },
-    { label: "Retirement Planning", index: 4 },
-    { label: "Tax Services", index: 5 },
-    { label: "Other Services", index: 6 },
-    { label: "Contact", index: 7 }
-  ];
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       {/* NAV */}
       {isMobile ? (
         <div className="mobile-nav-bar">
-          <a href="/" className="nav-logo-link" onClick={(e) => { e.preventDefault(); handleNavigate(0); }}>
+          <Link to="/" className="nav-logo-link" onClick={handleNav}>
             <img src="images/LogoSVG.svg" alt="DeafWise – Home" className="nav-logo" />
-          </a>
-          <span className="current-page">{menuItems[tab].label}</span>
+          </Link>
+          <span className="current-page">{currentItem.label}</span>
           <button className="burger-btn" onClick={() => setDrawerOpen(!drawerOpen)} aria-label="open menu">
             <MenuIcon />
           </button>
         </div>
       ) : (
         <nav className="main-nav">
-          <a href="/" className="nav-logo-link" onClick={(e) => { e.preventDefault(); handleNavigate(0); }}>
+          <Link to="/" className="nav-logo-link" onClick={handleNav}>
             <img src="images/LogoSVG.svg" alt="DeafWise – Home" className="nav-logo" />
-          </a>
+          </Link>
           {menuItems.map((item) => (
-            <button
-              key={item.index}
-              className={`nav-link${tab === item.index ? ' active' : ''}`}
-              onClick={() => handleNavigate(item.index)}
+            <Link
+              key={item.path}
+              to={item.path}
+              className={`nav-link${location.pathname === item.path ? ' active' : ''}`}
+              onClick={handleNav}
             >
               {item.label}
-            </button>
+            </Link>
           ))}
         </nav>
       )}
@@ -109,9 +95,11 @@ export default function App() {
         <List>
           {menuItems.map((item) => (
             <ListItemButton
-              key={item.index}
-              onClick={() => handleNavigate(item.index)}
-              selected={tab === item.index}
+              key={item.path}
+              component={Link}
+              to={item.path}
+              onClick={handleNav}
+              selected={location.pathname === item.path}
               sx={{
                 '&.Mui-selected': {
                   bgcolor: 'var(--purple-mid)',
@@ -129,28 +117,17 @@ export default function App() {
       </Drawer>
 
       {/* Content */}
-      <Box sx={{ flex: 1 }}>
-        {/* Home page is full-width (has its own hero + layout) */}
-        <TabPanel value={tab} index={0}>
-          <HomePage onNavigate={handleNavigate} />
-        </TabPanel>
-
-        {/* Other pages use Container */}
-        {[
-          { index: 1, component: <About /> },
-          { index: 2, component: <FinancialPlanning /> },
-          { index: 3, component: <FAQ /> },
-          { index: 4, component: <RetirementPlanningPage /> },
-          { index: 5, component: <TaxServicesPage /> },
-          { index: 6, component: <OtherServices /> },
-          { index: 7, component: <Contact /> },
-        ].map((item) => (
-          <TabPanel key={item.index} value={tab} index={item.index}>
-            <div className='container'>
-              {item.component}
-            </div>
-          </TabPanel>
-        ))}
+      <Box className="content-box" sx={{ flex: 1 }}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<div className="container"><About /></div>} />
+          <Route path="/financial-planning" element={<div className="container"><FinancialPlanning /></div>} />
+          <Route path="/faq" element={<div className="container"><FAQ /></div>} />
+          <Route path="/retirement-planning" element={<div className="container"><RetirementPlanningPage /></div>} />
+          <Route path="/tax-services" element={<div className="container"><TaxServicesPage /></div>} />
+          <Route path="/other-services" element={<div className="container"><OtherServices /></div>} />
+          <Route path="/contact" element={<div className="container"><Contact /></div>} />
+        </Routes>
       </Box>
 
       <ContactFooter />
