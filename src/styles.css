@@ -627,7 +627,11 @@ b {
   .container{
     padding: 1rem 1rem;
     margin: auto 2rem auto 2rem
-}
+  }
+  .contact-container{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* ============================
