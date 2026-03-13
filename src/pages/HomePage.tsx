@@ -130,20 +130,20 @@ const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
           {/* Stats */}
           <div className="stats-card">
             <div className="stat">
+              <div className="stat-num">MI</div>
+              <div className="stat-label">Michigan Based</div>
+            </div>
+            <div className="stat">
+              <div className="stat-num">🤟</div>
+              <div className="stat-label">Deaf Owned</div>
+            </div>
+            <div className="stat">
               <div className="stat-num">4+</div>
               <div className="stat-label">Services</div>
             </div>
             <div className="stat">
               <div className="stat-num">$</div>
               <div className="stat-label">Affordable</div>
-            </div>
-            <div className="stat">
-              <div className="stat-num">MI</div>
-              <div className="stat-label">Michigan Based</div>
-            </div>
-            <div className="stat">
-              <div className="stat-num">★</div>
-              <div className="stat-label">Trusted</div>
             </div>
           </div>
 
