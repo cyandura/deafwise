@@ -146,9 +146,9 @@ export default function App() {
           { index: 7, component: <Contact /> },
         ].map((item) => (
           <TabPanel key={item.index} value={tab} index={item.index}>
-            <Container maxWidth="lg" sx={{ py: 4 }}>
+            <div className='container'>
               {item.component}
-            </Container>
+            </div>
           </TabPanel>
         ))}
       </Box>
