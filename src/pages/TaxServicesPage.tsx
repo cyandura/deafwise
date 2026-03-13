@@ -13,17 +13,17 @@ const TaxServicesPage: React.FC = () => (
     <Typography className='bodyText'>
       I have <b>over 25 years of experience</b> preparing individual income tax returns.<br/>
       I have prepared returns with the following forms:<br/>
-      <ul>
-        <li><b>W-2</b> - Wage and Tax Statement</li>
-        <li><b>SSA-1099</b> - Social Security Benefit Statement</li>
-        <li><b>1099-INT</b> - Interest Income</li>
-        <li><b>1099-R</b> - Distributions from pensions, annuities, retirement or profit-sharing … </li>
-        <li><b>1099-C</b> - Cancellation of Debt</li>
-        <li><b>1099-MISC</b> - Miscellaneous Income</li>
-        <li><b>1098-M</b> - Mortgage Interest Statement</li>
-        <li><b>1099-K</b> - Payment Card and Third-Party Network Transactions</li>
-        <li><b>1098-T</b> - Tuition Statement</li>
-        <li><b>…and plus, more forms</b></li>
+      <ul className ='content-list'>
+        <li>✅ <b>W-2</b> - Wage and Tax Statement</li>
+        <li>✅ <b>SSA-1099</b> - Social Security Benefit Statement</li>
+        <li>✅ <b>1099-INT</b> - Interest Income</li>
+        <li>✅ <b>1099-R</b> - Distributions from pensions, annuities, retirement or profit-sharing … </li>
+        <li>✅ <b>1099-C</b> - Cancellation of Debt</li>
+        <li>✅ <b>1099-MISC</b> - Miscellaneous Income</li>
+        <li>✅ <b>1098-M</b> - Mortgage Interest Statement</li>
+        <li>✅ <b>1099-K</b> - Payment Card and Third-Party Network Transactions</li>
+        <li>✅ <b>1098-T</b> - Tuition Statement</li>
+        <li>✅ <b>…and plus, more forms</b></li>
       </ul>
 
     </Typography>
@@ -31,7 +31,7 @@ const TaxServicesPage: React.FC = () => (
 
     <Box className='bodyText' sx={{ 
       border: '2px solid var(--primary)', 
-      borderRadius: '8px', 
+      borderRadius: '20px', 
       padding: '16px', 
       margin: '16px 0',
       backgroundColor: '#f8f9fa'

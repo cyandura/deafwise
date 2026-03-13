@@ -40,13 +40,20 @@
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-size: 1.3rem !important;
+  font-family: 'Roboto', sans-serif;
   background: var(--off-white);
   color: var(--dark);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
+}
+strong, b {
+  font-weight: 800;
+}
+b {
+  font-weight: 800;
 }
 
 .content-box{
@@ -64,6 +71,7 @@ body {
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   padding: 0 32px;
   height: 56px;
@@ -291,7 +299,7 @@ body {
   background-clip: text;
 }
 .section-intro {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: var(--text-section);
   max-width: 540px;
@@ -340,7 +348,7 @@ body {
   font-size: 1.125rem;
 }
 .service-text {
-  font-size: 0.84375rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.4;
   color: var(--text-service);
@@ -475,7 +483,7 @@ body {
   background: #fff;
   border-radius: 12px;
   padding: 10px 12px;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--dark);
   text-decoration: none;
@@ -570,6 +578,23 @@ body {
   gap: 2rem;
 }
 
+.content-list {
+  list-style: none;
+  margin: 1.5rem auto 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+.list-bullets {
+    list-style: disc !important;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+}
+
+.content-subheading{
+  color: #1A4662;
+}
+
 /* —— RESPONSIVE —— */
 @media (max-width: 900px) {
   .hero-inner {
@@ -599,6 +624,10 @@ body {
     width: 150px;
     height: 150px;
   }
+  .container{
+    padding: 1rem 1rem;
+    margin: auto 2rem auto 2rem
+}
 }
 
 /* ============================

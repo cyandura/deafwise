@@ -16,7 +16,7 @@ const FinancialPlanning: React.FC = () => (
       I offer <b>financial planning services</b> to support the Deaf community with everyday money decisions. Together, we can look at:
     
 
-    <ul style={{ listStyle: 'none' }}>
+    <ul className ='content-list'>
       <li>✅ <b>Budgeting</b> - How to plan your money each paycheck so it lasts.</li>
       <li>✅ <b>HSA vs. FSA</b> - Learn the difference between Health Savings Account (HSA) and Flexible Spending Account (FSA). Which one fits you best? What should you know before you retire?</li>
       <li>✅ <b>College Savings (MESP)</b> - Michigan Education Savings Plan (MESP) can help save for your child's future college at today's cost.</li>

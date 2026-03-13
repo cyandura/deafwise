@@ -13,15 +13,15 @@ const RetirementPlanningPage: React.FC = () => (
     <Typography className='bodyText'>
       It's never too late to learn and make plans for your future.
       Do you have…
-      <ul style={{ listStyle: 'none' }}>
+      <ul className ='content-list'>
         <li>✅ A Traditional IRA (through work or personal account)?</li>
         <li>✅ A Roth IRA (through work or personal account)?</li>
         <li>✅ Money set aside from each paycheck going into your retirement account?</li>
-        
       </ul>
-      <b>Have you thought about…</b>
 
-      <ul style={{ listStyle: 'none' }}>
+      <Typography className='content-subheading' variant="h4">Have you thought about…</Typography>
+
+      <ul className ='content-list'>
         <li>✅ What you want to do after you retire?</li>
         <li>✅ Staying in your current house?</li>
         <li>✅ Paying off your house before retirement?</li>
