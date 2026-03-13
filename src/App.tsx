@@ -68,6 +68,7 @@ export default function App() {
             <MenuIcon />
           </button>
           <span className="current-page">{menuItems[tab].label}</span>
+          <span className="burger-spacer" aria-hidden="true" />
         </div>
       ) : (
         <nav className="main-nav">

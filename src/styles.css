@@ -79,6 +79,11 @@ body {
   padding: 0 16px;
   height: 56px;
 }
+.mobile-nav-bar .burger-btn,
+.mobile-nav-bar .burger-spacer {
+  width: 40px;
+  flex-shrink: 0;
+}
 .mobile-nav-bar .burger-btn {
   background: none;
   border: none;
@@ -533,6 +538,10 @@ body {
     text-align: center;
     border-radius: 16px;
     padding: 16px;
+  }
+  .logo-circle{
+    width: 150px;
+    height: 150px;
   }
 }
 
