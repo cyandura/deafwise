@@ -1,22 +1,15 @@
 import React, { useState } from 'react';
 import {
-  AppBar, 
-  Toolbar, 
-  Tabs, 
-  Tab, 
-  Box, 
+  Box,
   Container,
-  IconButton,
   Drawer,
   List,
   ListItemText,
   useTheme,
   useMediaQuery,
-  ListItemButton,
-  Typography
+  ListItemButton
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import TopBanner from './components/TopBanner';
 import HomePage from './pages/HomePage';
 import TaxServicesPage from './pages/TaxServicesPage';
 import RetirementPlanningPage from './pages/RetirementPlanningPage';
@@ -33,12 +26,13 @@ function TabPanel(props: { children?: React.ReactNode; value: number; index: num
   return (
     <div
       role="tabpanel"
+      className="content-box"
       hidden={value !== index}
       id={`tabpanel-${index}`}
       aria-labelledby={`tab-${index}`}
       {...other}
     >
-      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
+      {value === index && <>{children}</>}
     </div>
   );
 }
@@ -47,128 +41,85 @@ export default function App() {
   const [tab, setTab] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down(1400));
+  const isMobile = useMediaQuery(theme.breakpoints.down(900));
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
-    setTab(newValue);
-    if (isMobile) {
-      setDrawerOpen(false); // Close drawer after selection
-    }
-  };
-
-  const handleDrawerItemClick = (newValue: number) => {
+  const handleNavigate = (newValue: number) => {
     setTab(newValue);
     setDrawerOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
-  };
-
 
   const menuItems = [
-    { label: "Home", index: 0, component: <HomePage/> },
-    { label: "About", index: 1, component: <About/> },
-    { label: "Financial Planning", index: 2, component: <FinancialPlanning/> },
-    { label: "FAQ", index: 3, component: <FAQ/> },
-    { label: "Retirement Planning", index: 4, component: <RetirementPlanningPage/> },
-    { label: "Tax Services", index: 5, component: <TaxServicesPage/> },
-    { label: "Other Services", index: 6, component: <OtherServices/> },
-    { label: "Contact", index: 7, component: <Contact/> }
+    { label: "Home", index: 0 },
+    { label: "About", index: 1 },
+    { label: "Financial Planning", index: 2 },
+    { label: "FAQ", index: 3 },
+    { label: "Retirement Planning", index: 4 },
+    { label: "Tax Services", index: 5 },
+    { label: "Other Services", index: 6 },
+    { label: "Contact", index: 7 }
   ];
-          
 
   return (
-    <Box sx={{ 
-      display: 'flex',
-      flexDirection: 'column',
-      minHeight: '100vh'
-    }}>
-      {/* Banner */}
-      <TopBanner />
-      
-      {/* Menu Bar */}
-      <AppBar position="static" sx={{ bgcolor: '#8161cc' }}>
-        <Toolbar sx={{ justifyContent: 'center' }}>
-          {isMobile ? (
-            // Mobile: Burger menu
-            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer" 
-                edge="start"
-                onClick={handleDrawerToggle}
-                sx={{ mr: -4 }}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography 
-                variant="h6" 
-                sx={{ 
-                  flexGrow: 1, 
-                  textAlign: 'center',
-                  color: 'white'
-                }}
-              >
-                {menuItems[tab].label}
-              </Typography>
-            </Box>
-          ) : (
-            // Desktop: Horizontal tabs
-            <Tabs 
-              value={tab} 
-              onChange={handleTabChange} 
-              textColor="inherit" 
-              indicatorColor="secondary" 
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: '#8161cc',
-                color: 'white',
-                '& .MuiTab-root': {
-                  fontSize: '1.1rem',
-                  fontWeight: 'bold',
-                  minHeight: '48px',
-                  padding: '12px 24px'
-                }
-              }}
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      {/* NAV */}
+      {isMobile ? (
+        <div className="mobile-nav-bar">
+          <a href="/" className="nav-logo-link" onClick={(e) => { e.preventDefault(); handleNavigate(0); }}>
+            <img src="images/LogoSVG.svg" alt="DeafWise – Home" className="nav-logo" />
+          </a>
+          <span className="current-page">{menuItems[tab].label}</span>
+          <button className="burger-btn" onClick={() => setDrawerOpen(!drawerOpen)} aria-label="open menu">
+            <MenuIcon />
+          </button>
+        </div>
+      ) : (
+        <nav className="main-nav">
+          <a href="/" className="nav-logo-link" onClick={(e) => { e.preventDefault(); handleNavigate(0); }}>
+            <img src="images/LogoSVG.svg" alt="DeafWise – Home" className="nav-logo" />
+          </a>
+          {menuItems.map((item) => (
+            <button
+              key={item.index}
+              className={`nav-link${tab === item.index ? ' active' : ''}`}
+              onClick={() => handleNavigate(item.index)}
             >
-              {menuItems.map((item) => (
-                <Tab key={item.index} label={item.label} />
-              ))}
-            </Tabs>
-          )}
-        </Toolbar>
-      </AppBar>
-       {/* Mobile Drawer */}
-       <Drawer
+              {item.label}
+            </button>
+          ))}
+        </nav>
+      )}
+
+      {/* Mobile Drawer */}
+      <Drawer
         variant="temporary"
-        anchor="left"
+        anchor="right"
         open={drawerOpen}
-        onClose={handleDrawerToggle}
-        ModalProps={{
-          keepMounted: true,
-        }}
+        onClose={() => setDrawerOpen(false)}
+        ModalProps={{ keepMounted: true }}
         sx={{
-          display: { xs: 'block', [theme.breakpoints.up(1400)]: 'none' },
-          '& .MuiDrawer-paper': { 
-            boxSizing: 'border-box', 
-            width: 240,
-            bgcolor: '#8161cc',
-            color: 'white'
+          '& .MuiDrawer-paper': {
+            boxSizing: 'border-box',
+            width: 260,
+            bgcolor: 'var(--dark)',
+            color: 'rgba(255,255,255,0.8)',
           },
         }}
       >
         <List>
           {menuItems.map((item) => (
-            <ListItemButton 
+            <ListItemButton
               key={item.index}
-              onClick={() => handleDrawerItemClick(item.index)}
+              onClick={() => handleNavigate(item.index)}
+              selected={tab === item.index}
               sx={{
+                '&.Mui-selected': {
+                  bgcolor: 'var(--purple-mid)',
+                  color: '#fff',
+                },
                 '&:hover': {
-                  bgcolor: 'rgba(255, 255, 255, 0.1)'
-                }
+                  bgcolor: 'rgba(124,58,191,0.3)',
+                },
               }}
             >
               <ListItemText primary={item.label} />
@@ -176,19 +127,34 @@ export default function App() {
           ))}
         </List>
       </Drawer>
+
       {/* Content */}
       <Box sx={{ flex: 1 }}>
-        <Container maxWidth="lg">
-        { menuItems.map((item) => (
-              <TabPanel value={tab} index={item.index}>
-                {item.component}
-              </TabPanel>
-            ))
-        }
-        </Container>
+        {/* Home page is full-width (has its own hero + layout) */}
+        <TabPanel value={tab} index={0}>
+          <HomePage onNavigate={handleNavigate} />
+        </TabPanel>
+
+        {/* Other pages use Container */}
+        {[
+          { index: 1, component: <About /> },
+          { index: 2, component: <FinancialPlanning /> },
+          { index: 3, component: <FAQ /> },
+          { index: 4, component: <RetirementPlanningPage /> },
+          { index: 5, component: <TaxServicesPage /> },
+          { index: 6, component: <OtherServices /> },
+          { index: 7, component: <Contact /> },
+        ].map((item) => (
+          <TabPanel key={item.index} value={tab} index={item.index}>
+            <div className='container'>
+              {item.component}
+            </div>
+          </TabPanel>
+        ))}
       </Box>
-      <ContactFooter/>
+
+      <ContactFooter />
       <AccessibilityMenu />
     </Box>
   );
-} 
+}

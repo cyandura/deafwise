@@ -5,15 +5,17 @@ import Dropdown from '../components/Dropdown';
 const FAQ: React.FC = () => (
   <Box>
 
-    <Typography variant="h3" className="tabHeader" sx={{mb:2}}>
-      Frequently Asked Questions
-    </Typography>
+    <div className="tabHeader">
+      <Typography variant="h3" >
+        Frequently Asked Questions
+      </Typography>
+    </div>
 
 
     <Dropdown title="Are you ready to retire? Have you done your research and planning at least 10 years in advance? Why or why not?">
       <Typography className="bodyText">
         There are several things you need to prepare for, for example:
-        <ul>
+        <ul className='content-list'>
           <li>
             Where do I want to retire? Stay here, move to another state, or downsize to a smaller home?
           </li>
@@ -35,10 +37,10 @@ const FAQ: React.FC = () => (
     <Dropdown title="At your current job, do you have a Traditional IRA account?">
       <Typography  className="bodyText">
         I suggest opening a Roth IRA through work if it’s offered, and stopping contributions to your Traditional IRA.
-        <p/>
+        <p/><br/>
         Why? Because when you retire, money in a Roth IRA does not count as “provisional income” when you file your income tax return.
         Provisional income includes:
-        <ul>
+        <ul className='content-list list-bullets'>
           <li>
             Work pension (1099-R)
           </li>
@@ -73,15 +75,15 @@ const FAQ: React.FC = () => (
     <Dropdown title="Are you paying rent for your apartment or house with only SSDI or SSI?">
       <Typography  className="bodyText">
         You may qualify for a refund through the Michigan Homestead Property Tax Credit.
-        <p/>
+        <p/><br/>
         👉 Check with Deaf Tax Lady to learn more!
 
       </Typography>
     </Dropdown>
     <Dropdown title="Do you check your annual free credit report every year?">
       <Typography  className="bodyText">
-        <a href="https://www.annualcreditreport.com/index.action" target="_blank" rel="noopener noreferrer">https://www.annualcreditreport.com/index.action</a>
-        <p/>
+        <a href="https://www.annualcreditreport.com/index.action" target="_blank" rel="noopener noreferrer">annualcreditreport.com</a>
+        <p/><br/>
         You should!  Make sure all your creditors (Macy’s, Visa, car loan, Discover, etc.) are correct. 
         This helps protect you—so no one is using your SSN# and your good credit to get approved for things like a car loan.
       </Typography>

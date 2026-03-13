@@ -27,7 +27,7 @@ const Dropdown: React.FC<DropdownProps> = ({ title, children, defaultOpen = fals
           cursor: 'pointer',
           padding: '12px 16px',
           backgroundColor: '#f5f5f5',
-          borderRadius: '8px',
+          borderRadius: '20px',
           border: '1px solid #e0e0e0',
           '&:hover': {
             backgroundColor: '#eeeeee',
@@ -44,11 +44,11 @@ const Dropdown: React.FC<DropdownProps> = ({ title, children, defaultOpen = fals
       
       <Collapse in={isOpen}>
         <Box sx={{ 
-          padding: '16px',
+          padding: '32px',
           backgroundColor: '#fafafa',
           border: '1px solid #e0e0e0',
           borderTop: 'none',
-          borderRadius: '0 0 8px 8px'
+          borderRadius: '0 0 20px 20px'
         }}>
           {children}
         </Box>

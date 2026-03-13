@@ -18,8 +18,7 @@ import {
   Contrast as ContrastIcon,
   Link as LinkIcon,
   FormatLineSpacing as SpacingIcon,
-  Close as CloseIcon,
-  Settings as SettingsIcon
+  Close as CloseIcon
 } from '@mui/icons-material';
 
 interface AccessibilitySettings {
@@ -54,13 +53,11 @@ const AccessibilityMenu: React.FC = () => {
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
-    // Apply bigger text
+    // Scale root font-size — all rem-based sizes (custom CSS + MUI) scale with it
     if (newSettings.biggerText) {
-      root.style.setProperty('--accessibility-font-size', `${newSettings.fontSize}%`);
-      root.classList.add('accessibility-bigger-text');
+      root.style.fontSize = `${newSettings.fontSize}%`;
     } else {
-      root.style.removeProperty('--accessibility-font-size');
-      root.classList.remove('accessibility-bigger-text');
+      root.style.fontSize = '';
     }
 
     // Apply high contrast
@@ -135,28 +132,24 @@ const AccessibilityMenu: React.FC = () => {
   return (
     <>
       <Tooltip title="Accessibility Menu">
-        <IconButton
+          <IconButton
           onClick={handleClick}
           size="large"
           sx={{
             position: 'fixed',
             bottom: 20,
             right: 20,
-            backgroundColor: '#8161cc',
+            backgroundColor: 'var(--primary)',
             color: 'white',
             '&:hover': {
-              backgroundColor: '#6a4f9f'
+              backgroundColor: 'rgba(91,75,214,0.9)'
             },
             zIndex: 1000,
             boxShadow: '0 4px 12px rgba(0,0,0,0.15)'
           }}
           aria-label="Open accessibility menu"
         >
-          {settings.biggerText || settings.highContrast || settings.highlightLinks ? (
-            <SettingsIcon />
-          ) : (
-            <AccessibilityIcon />
-          )}
+          <AccessibilityIcon />
         </IconButton>
       </Tooltip>
 
@@ -187,7 +180,7 @@ const AccessibilityMenu: React.FC = () => {
       >
         <Box sx={{ p: 2, pb: 1 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-            <Typography variant="h6" sx={{ color: '#8161cc', fontWeight: 'bold' }}>
+            <Typography variant="h6" sx={{ color: 'var(--primary)', fontWeight: 'bold' }}>
               Accessibility
             </Typography>
             <IconButton size="small" onClick={handleClose}>
@@ -204,7 +197,7 @@ const AccessibilityMenu: React.FC = () => {
         {/* Bigger Text */}
         <Box sx={{ p: 2 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-            <TextIncreaseIcon sx={{ mr: 1, color: '#8161cc' }} />
+            <TextIncreaseIcon sx={{ mr: 1, color: 'var(--primary)' }} />
             <Typography variant="subtitle2">Bigger Text</Typography>
             {settings.biggerText && <Chip label="ON" size="small" color="primary" sx={{ ml: 1 }} />}
           </Box>
@@ -245,7 +238,7 @@ const AccessibilityMenu: React.FC = () => {
         {/* High Contrast */}
         <Box sx={{ p: 2 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-            <ContrastIcon sx={{ mr: 1, color: '#8161cc' }} />
+            <ContrastIcon sx={{ mr: 1, color: 'var(--primary)' }} />
             <Typography variant="subtitle2">High Contrast</Typography>
             {settings.highContrast && <Chip label="ON" size="small" color="primary" sx={{ ml: 1 }} />}
           </Box>
@@ -266,7 +259,7 @@ const AccessibilityMenu: React.FC = () => {
         {/* Highlight Links */}
         <Box sx={{ p: 2 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-            <LinkIcon sx={{ mr: 1, color: '#8161cc' }} />
+            <LinkIcon sx={{ mr: 1, color: 'var(--primary)' }} />
             <Typography variant="subtitle2">Highlight Links</Typography>
             {settings.highlightLinks && <Chip label="ON" size="small" color="primary" sx={{ ml: 1 }} />}
           </Box>
@@ -286,7 +279,7 @@ const AccessibilityMenu: React.FC = () => {
 
         {/* Reset Button */}
         <Box sx={{ p: 2 }}>
-          <MenuItem onClick={resetSettings} sx={{ justifyContent: 'center', color: '#8161cc' }}>
+          <MenuItem onClick={resetSettings} sx={{ justifyContent: 'center', color: 'var(--primary)' }}>
             Reset All Settings
           </MenuItem>
         </Box>

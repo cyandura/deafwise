@@ -1,19 +1,18 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
 
 const TopBanner: React.FC = () => (
-  <Box sx={{ 
-    bgcolor: '#bca0ff',
-    py: 2, 
+  <div style={{
+    width: '100%',
+    background: 'linear-gradient(135deg, #2d0a5a 0%, #6a1fbf 45%, #a855f7 80%, #22c98a 100%)',
+    padding: '32px 24px',
     textAlign: 'center',
-    color: 'white',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center'
   }}>
-    <img src="images/DeafWiseEditedDarkerGreen.png" alt="DeafWise Planning & Taxes" width={450} />
-  </Box>
+    <img
+      src="images/DeafWiseEditedDarkerGreen.png"
+      alt="DeafWise Planning & Taxes"
+      style={{ maxWidth: 320, width: '100%', borderRadius: 12 }}
+    />
+  </div>
 );
 
-export default TopBanner; 
+export default TopBanner;
