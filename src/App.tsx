@@ -64,14 +64,19 @@ export default function App() {
       {/* NAV */}
       {isMobile ? (
         <div className="mobile-nav-bar">
+          <a href="/" className="nav-logo-link" onClick={(e) => { e.preventDefault(); handleNavigate(0); }}>
+            <img src="images/LogoSVG.svg" alt="DeafWise – Home" className="nav-logo" />
+          </a>
+          <span className="current-page">{menuItems[tab].label}</span>
           <button className="burger-btn" onClick={() => setDrawerOpen(!drawerOpen)} aria-label="open menu">
             <MenuIcon />
           </button>
-          <span className="current-page">{menuItems[tab].label}</span>
-          <span className="burger-spacer" aria-hidden="true" />
         </div>
       ) : (
         <nav className="main-nav">
+          <a href="/" className="nav-logo-link" onClick={(e) => { e.preventDefault(); handleNavigate(0); }}>
+            <img src="images/LogoSVG.svg" alt="DeafWise – Home" className="nav-logo" />
+          </a>
           {menuItems.map((item) => (
             <button
               key={item.index}
@@ -87,7 +92,7 @@ export default function App() {
       {/* Mobile Drawer */}
       <Drawer
         variant="temporary"
-        anchor="left"
+        anchor="right"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
         ModalProps={{ keepMounted: true }}

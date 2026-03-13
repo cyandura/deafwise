@@ -31,20 +31,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-y: scroll;
 }
-
 /* —— NAV —— */
 .main-nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(26,10,46,0.97);
+  background: rgba(45, 10, 90, 0.60);
   border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
   padding: 0 32px;
   height: 56px;
+}
+.nav-logo-link {
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+.nav-logo {
+  height: 36px;
+  width: auto;
 }
 .main-nav a,
 .main-nav button.nav-link {
@@ -72,17 +80,25 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(26,10,46,0.97);
+  background: rgba(45, 10, 90, 0.60);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   display: flex;
   align-items: center;
   padding: 0 16px;
   height: 56px;
 }
-.mobile-nav-bar .burger-btn,
-.mobile-nav-bar .burger-spacer {
+.mobile-nav-bar .burger-btn {
   width: 40px;
   flex-shrink: 0;
+}
+.mobile-nav-bar .nav-logo-link {
+  margin-right: 0;
+  margin-left: 4px;
+}
+.mobile-nav-bar .nav-logo {
+  height: 32px;
+  width: auto;
 }
 .mobile-nav-bar .burger-btn {
   background: none;
@@ -109,6 +125,8 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
+  border-top: 56px solid #2d0a5a;
+  margin-top: -56px;
   background:
     radial-gradient(ellipse 500px 500px at 75% 20%, rgba(34,201,138,0.25) 0%, transparent 70%),
     radial-gradient(ellipse 350px 350px at 25% 85%, rgba(212,168,245,0.22) 0%, transparent 60%),
@@ -127,7 +145,6 @@ body {
   display: flex;
   align-items: center;
   gap: 64px;
-  width: 100%;
 }
 
 /* LOGO BADGE */
@@ -244,7 +261,14 @@ body {
   color: var(--dark);
   margin-bottom: 16px;
 }
-.section-title em { color: var(--purple-mid); font-style: normal; }
+.section-title em {
+  font-style: normal;
+  font-size: clamp(3rem, 3.5vw, 3rem);
+  background: linear-gradient(135deg, var(--purple-mid), #6366f1, var(--green-vivid));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .section-intro {
   font-size: 1rem;
   line-height: 1.7;
