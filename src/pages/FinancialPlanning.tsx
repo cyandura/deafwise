@@ -24,7 +24,7 @@ const FinancialPlanning: React.FC = () => (
       <li>✅ <b>Consignment</b> - Understand the pros and cons. Know the risks before you sign an agreement for someone.</li>
       <li>✅ <b>Free Credit Report</b> - Check your credit report once a year to make sure all accounts are really yours (and not someone using your SS#).</li>
       <li>✅ <b>Job Paperwork</b> - Need help filling out pre-employment forms, W-4 allowance, retirement plan, or health insurance? I can walk you through it.</li>
-      <li>✅ <b>Mortgage Refinancing</b> - Should you refinance your house? We can talk about the pros and cons and see if it works with your budget.</li>
+      <li>✅ <b>Mortgage Refinancing</b> - Should you refinance your house? We can talk about the pros(+) and cons(-) and see if it works with your budget.</li>
     </ul>
 
     </Typography>

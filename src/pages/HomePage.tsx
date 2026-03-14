@@ -55,7 +55,7 @@ const HomePage: React.FC = () => {
               <div className="service-icon">🎓</div>
               <div className="service-text">Michigan college savings plans (MESP 529)</div>
             </div>
-            <div className="service-card featured">
+            <div className="service-card">
               <div className="service-icon">🏥</div>
               <div className="service-text">Health Savings Accounts (HSA) vs. Flexible Spending Accounts (FSA)</div>
             </div>
