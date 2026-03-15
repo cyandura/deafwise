@@ -51,7 +51,7 @@ const OtherServices: React.FC = () => (
 
         <p><b>What about a PC?</b></p>
         <ul className="themed-list">
-          <li>If you buy an HP or another PC laptop, the main support option is to call the company's <b>1-800 number</b>.</li>
+          <li>If you buy an HP or another PC laptop, the main support option is to call the company's <b>1-800 number</b></li>
           <li>It can be frustrating to go through the automated system before you even reach the right department or a live person.</li>
           <li>Getting repairs or answers often takes longer and feels less personal.</li>
         </ul>
