@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="112.38 47.30 328.05 437.28"
-     preserveAspectRatio="xMidYMid meet">
+     viewBox="82 17 388 498"
+     preserveAspectRatio="none">
   <defs>
-    <linearGradient id="ilyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7c3abf"/>
+    <linearGradient id="ilyGrad" x1="0%" y1="40%" x2="100%" y2="100%">
+      <stop offset="50%" stop-color="#5181A6"/>
       <stop offset="100%" stop-color="#22c98a"/>
     </linearGradient>
   </defs>
-  <g transform="translate(0.000000,545.280000) scale(0.024000,-0.024000)" fill="url(#ilyGrad)" stroke="url(#ilyGrad)" stroke-width="900">
+  <g transform="translate(0.000000,545.280000) scale(0.024000,-0.024000)" fill="url(#ilyGrad)" stroke="url(#ilyGrad)" stroke-width="900" stroke-linejoin="round" stroke-linecap="round" paint-order="stroke">
     <path d="M12275 20520 c-38 -11 -108 -24 -155 -30 -60 -8 -106 -21 -155 -45
 -38 -19 -95 -45 -125 -60 -55 -25 -117 -63 -201 -120 -59 -40 -239 -221 -280
 -282 -18 -26 -37 -51 -42 -54 -14 -10 -96 -176 -127 -259 -15 -41 -35 -95 -44

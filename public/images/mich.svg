@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" 
-     viewBox="210.55 96.44 824.92 859.15"
+     viewBox="180 66 885 920"
      preserveAspectRatio="xMidYMid meet">
   <defs>
-    <linearGradient id="michGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7c3abf"/>
+    <linearGradient id="michGrad" x1="0%" y1="70%" x2="100%" y2="100%">
+      <stop offset="60%" stop-color="#5181A6"/>
       <stop offset="100%" stop-color="#22c98a"/>
     </linearGradient>
   </defs>
-  <g transform="translate(0.000000,1065.600000) scale(0.024000,-0.024000)" fill="url(#michGrad)" stroke="url(#michGrad)" stroke-width="1400">
+  <g transform="rotate(-2.2, 623, 526)" fill="url(#michGrad)" stroke="url(#michGrad)" stroke-width="1500" stroke-linejoin="round" stroke-linecap="round" paint-order="stroke">
+  <g transform="translate(0.000000,1065.600000) scale(0.024000,-0.024000)">
     <path d="M19517 40160 c-71 -6 -142 -19 -210 -39 -63 -19 -144 -34 -213 -40
 -122 -11 -322 -55 -424 -94 -62 -23 -166 -72 -275 -130 -27 -15 -84 -41 -125
 -58 -41 -18 -118 -51 -170 -74 -52 -24 -108 -46 -125 -50 -44 -10 -200 -81
@@ -525,5 +526,6 @@ m-466 -614 c17 -8 39 -33 52 -59 20 -38 23 -56 19 -116 -3 -53 -11 -83 -32
 -11 0 -42 -20 -70 -45z"/>
     <path d="M28993 23598 c-15 -19 -33 -78 -33 -107 0 -31 25 -71 44 -71 7 0 18
 11 24 25 13 28 16 105 6 143 -7 24 -26 29 -41 10z"/>
+  </g>
   </g>
 </svg>

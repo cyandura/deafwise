@@ -128,7 +128,7 @@ const HomePage: React.FC = () => {
               <div className="stat-label">Michigan Based</div>
             </div>
             <div className="stat">
-              <div className="stat-num"><img src="images/ily.svg" alt="I Love You in ASL" style={{ height: '1em' }} /></div>
+              <div className="stat-num"><img src="images/ily.svg" alt="I Love You in ASL" style={{ height: '1em', width: '1.02em' }} /></div>
               <div className="stat-label">Deaf Owned</div>
             </div>
             <div className="stat">
