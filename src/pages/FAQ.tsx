@@ -32,7 +32,7 @@ const FAQ: React.FC = () => (
         <p>
           Why? Because when you retire, money in a Roth IRA does not count as "provisional income" when you file your income tax return. Provisional income includes:
         </p>
-        <ul className="themed-list bullets">
+        <ul className="themed-list">
           <li>Work pension (1099-R)</li>
           <li>Social Security benefits (up to 85% may be taxable)</li>
           <li>Any investment, capital gains or interest income, depending on your total income, filing status, and standard deduction</li>

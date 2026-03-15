@@ -164,7 +164,8 @@ const AccessibilityMenu: React.FC = () => {
             overflowY: 'auto',
             overflowX: 'off',
             zIndex: 1300,
-            px: 1
+            px: 1,
+            borderRadius: '20px'
           }
         }}
         transformOrigin={{ horizontal: 'right', vertical: 'bottom' }}
