@@ -516,6 +516,305 @@ b {
 .footer-copy { font-size: 0.75rem; margin: 0; }
 .footer-credit { font-size: 0.6875rem; color: rgba(255,255,255,0.3); margin: 0; }
 
+/* —— PAGE HEADER (inner pages) —— */
+.page-hero {
+  position: relative;
+  padding: 56px 48px 48px;
+  background:
+    radial-gradient(ellipse 500px 400px at 75% 30%, rgba(var(--green-vivid-rgb),0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 350px 350px at 25% 80%, rgba(212,168,245,0.18) 0%, transparent 60%),
+    linear-gradient(135deg, var(--purple-darker) 0%, #6a1fbf 50%, #a855f7 100%);
+  color: #fff;
+  border-top: 56px solid var(--purple-darker);
+  margin-top: -56px;
+}
+.page-hero-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+.page-hero .section-tag {
+  color: var(--green-light);
+}
+.page-hero .section-tag::before {
+  background: var(--green-light);
+}
+.page-hero-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.page-hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  max-width: 600px;
+}
+
+/* —— PAGE CONTENT WRAPPER —— */
+.page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 30px 64px;
+}
+
+/* —— THEMED DROPDOWN / ACCORDION —— */
+.themed-dropdown {
+  background: #fff;
+  border: 1.5px solid rgba(var(--purple-soft-rgb),0.2);
+  border-radius: 20px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.25s;
+}
+.themed-dropdown:hover {
+  border-color: var(--purple-soft);
+  box-shadow: 0 8px 30px rgba(var(--purple-mid-rgb),0.08);
+}
+.themed-dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 20px 24px;
+  gap: 16px;
+  background: transparent;
+  transition: background 0.2s;
+}
+.themed-dropdown-header:hover {
+  background: rgba(var(--purple-soft-rgb),0.06);
+}
+.themed-dropdown-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+}
+.themed-dropdown-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--purple-pale), var(--purple-icon));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s, background 0.3s;
+  color: var(--purple-mid);
+}
+.themed-dropdown.open .themed-dropdown-icon {
+  background: linear-gradient(135deg, var(--purple-mid), var(--indigo));
+  color: #fff;
+  transform: rotate(180deg);
+}
+.themed-dropdown-body {
+  padding: 4px 24px 24px;
+  margin-top: 4px;
+  border-top: 1px solid rgba(var(--purple-soft-rgb),0.12);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-section);
+}
+
+/* —— THEMED LIST ITEMS —— */
+.themed-list {
+  list-style: none;
+  margin: 20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.themed-list li {
+  background: #fff;
+  border: 2px solid rgba(var(--purple-soft-rgb),0.15);
+  border-radius: 14px;
+  padding: 16px 20px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-service);
+  transition: all 0.2s;
+}
+.themed-list li::before {
+  display: none;
+}
+.themed-list li b {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--dark);
+  margin-bottom: 2px;
+}
+.themed-list li:hover {
+  border-color: var(--purple-soft);
+  transform: translateX(4px);
+  box-shadow: 0 4px 16px rgba(var(--purple-mid-rgb),0.08);
+}
+.themed-list.green-accent li {
+  padding-left: 58px;
+  position: relative;
+}
+.themed-list.green-accent li::before {
+  display: flex;
+  content: '✓';
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e0faf0, var(--green-light));
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--green-deep);
+}
+
+/* bullet-style themed list (for nested lists) */
+.themed-list.bullets li {
+  background: transparent;
+  border: none;
+  padding: 6px 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.themed-list.bullets li:hover {
+  transform: none;
+  box-shadow: none;
+}
+.themed-list.bullets li::before {
+  content: '•';
+  background: none;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  color: var(--purple-mid);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* —— INFO CARD (disclaimer, callout) —— */
+.info-card {
+  background: #fff;
+  border: 1.5px solid rgba(var(--purple-soft-rgb),0.25);
+  border-radius: 20px;
+  padding: 28px 28px;
+  margin: 28px 0;
+  position: relative;
+  overflow: hidden;
+}
+.info-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--purple-mid), var(--green-vivid));
+  border-radius: 4px 0 0 4px;
+}
+.info-card-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-card p, .info-card-body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-section);
+}
+
+/* —— ABOUT PAGE —— */
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 48px;
+  align-items: start;
+}
+.about-photo {
+  text-align: center;
+}
+.about-photo img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 24px;
+  border: 3px solid rgba(var(--purple-soft-rgb),0.3);
+}
+.about-photo-name {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-section);
+}
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-section);
+}
+.about-text b {
+  color: var(--dark);
+}
+
+/* —— CONTACT PAGE —— */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.contact-layout img {
+  width: 100%;
+  border-radius: 28px;
+}
+
+/* —— CTA BANNER —— */
+.cta-banner {
+  background: linear-gradient(135deg, #f0fff9, #e0faf0);
+  border: 1.5px solid rgba(var(--green-vivid-rgb),0.3);
+  border-radius: 16px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+.cta-banner span { font-size: 1.5rem; }
+.cta-banner p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .page-hero {
+    padding: 40px 24px 36px;
+  }
+  .page-content {
+    padding: 32px 20px 48px;
+  }
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+  .about-photo img {
+    max-width: 250px;
+  }
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* —— ANIMATIONS —— */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
@@ -786,4 +1085,49 @@ b {
 }
 .accessibility-high-contrast [role="tabpanel"] {
   background-color: transparent !important;
+}
+
+/* Themed dropdown high contrast fixes */
+.accessibility-high-contrast .themed-dropdown-title {
+  color: #fff !important;
+}
+.accessibility-high-contrast .themed-dropdown-header {
+  background-color: #111 !important;
+}
+.accessibility-high-contrast .themed-dropdown {
+  background-color: #000 !important;
+  border-color: #fff !important;
+}
+.accessibility-high-contrast .themed-dropdown-body {
+  color: #fff !important;
+  border-top-color: #444 !important;
+}
+.accessibility-high-contrast .themed-dropdown-icon {
+  background: #333 !important;
+  color: #fff !important;
+}
+.accessibility-high-contrast .themed-list li {
+  background-color: #111 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+.accessibility-high-contrast .themed-list li b {
+  color: #fff !important;
+}
+.accessibility-high-contrast .info-card {
+  background-color: #000 !important;
+  border-color: #fff !important;
+  color: #fff !important;
+}
+.accessibility-high-contrast .info-card-body,
+.accessibility-high-contrast .info-card-title {
+  color: #fff !important;
+}
+.accessibility-high-contrast .page-hero-title,
+.accessibility-high-contrast .page-hero-sub {
+  color: #fff !important;
+}
+.accessibility-high-contrast b,
+.accessibility-high-contrast strong {
+  color: #fff !important;
 }

@@ -1,72 +1,60 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
 
 const About: React.FC = () => (
-  <Box>
-    <Box sx={{display: 'flex', justifyContent: 'center'}}>
-      <Typography variant="h2" className="tabHeader" sx ={{
-        fontFamily: 'Great Vibes',
-        }}>
-        <b>My Story</b>
-      </Typography>
-    </Box>
-    <Box sx={{ 
-      display: 'flex', 
-      gap: 3, 
-      mt: 2,
-      flexDirection: { xs: 'column', md: 'row' } // Stack on mobile, side-by-side on desktop
-    }}>
-      {/* Image - Above text on mobile, left side on desktop */}
-      <Box sx={{ 
-        flex: { xs: 'none', md: '0 0 40%' }, 
-        display: 'flex', 
-        justifyContent: 'center', 
-        alignItems: 'flex-start',
-        order: { xs: 1, md: 1 } // Image first on mobile, first on desktop
-      }}>
-        <Box sx={{ maxWidth: { xs: '250px', md: '400px'} }}>
-          <img 
-            src="images\deaftaxlady.jpg" 
-            alt="Connie" 
-            style={{ 
-              width: '100%', 
-              height: 'auto',
-              borderRadius: '20px'
-            }}
-          />
-          <Typography variant="subtitle1" sx={{display: 'flex', justifyContent: 'center'}}>
-            Connie Tincknell-Yandura
-          </Typography>
-        </Box>
-      </Box>
-      
-      {/* Content - Below image on mobile, right side on desktop */}
-      <Box sx={{ 
-        flex: { xs: 'none', md: '0 0 60%' },
-        order: { xs: 2, md: 2 } // Content second on mobile, second on desktop
-      }}>
-        <Typography className='bodyText' variant="body1">
-          I am proud to operate DeafWise Planning & Taxes as a Deaf-owned side business.
-          <p/><br/>
+  <>
+    <section className="page-hero">
+      <div className="page-hero-inner">
+        <div className="section-tag">About</div>
+        <h1 className="page-hero-title">My Story</h1>
+        <p className="page-hero-sub">
+          Dedicated to empowering the Deaf community with financial knowledge and tools.
+        </p>
+      </div>
+    </section>
 
-          I earned my <b>BBA in Finance</b> from Walsh College in Troy, Michigan, along with a <b>Certificate of Finance</b> (nine graduate credits). I also hold dual <b>Associate degrees</b> in Business Administration and Accounting from Oakland Community College.
-          <p/><br/>
-          I worked at <b>Oakland Community College for four years</b>—serving as an <b>ASL Tutor for four years</b> and an <b>Accounting Tutor for two years.</b>
-          <p/><br/>
-          I worked as a substitute teacher with a Michigan substitute permit in public schools across Macomb and Oakland counties from October 2015 through June 2016. This included <b>teaching ASL classes</b> as a substitute at two public schools.
-          <p/><br/>
-          My professional experience includes working at <b>H&R Block</b> for two years (1999–2000) and serving as a <b>Volunteer Income Tax Assistance (VITA)</b> preparer for seven years—one year in Pontiac, MI, and six years in Indianapolis, IN. In addition, I have provided <b>income tax preparation for family members and Deaf taxpayers for over 25 years.</b>
-          <p/><br/>
-          I am passionate about helping and educating the Deaf community on <b>income taxes, unclaimed property, retirement planning, and many other financial topics.</b> I have supported Deaf clients across Michigan, Indiana, and beyond.
-          <p/><br/>
-          In addition, I have volunteered as a Deaf Interpreter (DI) for over 30 years, assisting with communication between Deaf and hearing individuals throughout the community.
-          <p/><br/>
-          To make it easier for my clients, I am available to meet your needs after 6:00 PM on weekdays or on weekends.
-          <br/><br/>
-        </Typography>
-      </Box>
-    </Box>
-  </Box>
+    <div className="page-content">
+      <div className="about-layout">
+        <div className="about-photo">
+          <img src="images/deaftaxlady.jpg" alt="Connie" />
+          <p className="about-photo-name">Connie Tincknell-Yandura</p>
+        </div>
+
+        <div className="about-text">
+          <p>
+            I am proud to operate DeafWise Planning &amp; Taxes as a Deaf-owned side business.
+          </p>
+          <br />
+          <p>
+            I earned my <b>BBA in Finance</b> from Walsh College in Troy, Michigan, along with a <b>Certificate of Finance</b> (nine graduate credits). I also hold dual <b>Associate degrees</b> in Business Administration and Accounting from Oakland Community College.
+          </p>
+          <br />
+          <p>
+            I worked at <b>Oakland Community College for four years</b>—serving as an <b>ASL Tutor for four years</b> and an <b>Accounting Tutor for two years.</b>
+          </p>
+          <br />
+          <p>
+            I worked as a substitute teacher with a Michigan substitute permit in public schools across Macomb and Oakland counties from October 2015 through June 2016. This included <b>teaching ASL classes</b> as a substitute at two public schools.
+          </p>
+          <br />
+          <p>
+            My professional experience includes working at <b>H&amp;R Block</b> for two years (1999–2000) and serving as a <b>Volunteer Income Tax Assistance (VITA)</b> preparer for seven years—one year in Pontiac, MI, and six years in Indianapolis, IN. In addition, I have provided <b>income tax preparation for family members and Deaf taxpayers for over 25 years.</b>
+          </p>
+          <br />
+          <p>
+            I am passionate about helping and educating the Deaf community on <b>income taxes, unclaimed property, retirement planning, and many other financial topics.</b> I have supported Deaf clients across Michigan, Indiana, and beyond.
+          </p>
+          <br />
+          <p>
+            In addition, I have volunteered as a Deaf Interpreter (DI) for over 30 years, assisting with communication between Deaf and hearing individuals throughout the community.
+          </p>
+          <br />
+          <p>
+            To make it easier for my clients, I am available to meet your needs after 6:00 PM on weekdays or on weekends.
+          </p>
+        </div>
+      </div>
+    </div>
+  </>
 );
 
-export default About; 
+export default About;

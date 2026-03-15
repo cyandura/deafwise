@@ -120,13 +120,13 @@ export default function App() {
       <Box className="content-box" sx={{ flex: 1 }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<div className="container"><About /></div>} />
-          <Route path="/financial-planning" element={<div className="container"><FinancialPlanning /></div>} />
-          <Route path="/faq" element={<div className="container"><FAQ /></div>} />
-          <Route path="/retirement-planning" element={<div className="container"><RetirementPlanningPage /></div>} />
-          <Route path="/tax-services" element={<div className="container"><TaxServicesPage /></div>} />
-          <Route path="/other-services" element={<div className="container"><OtherServices /></div>} />
-          <Route path="/contact" element={<div className="container"><Contact /></div>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/financial-planning" element={<FinancialPlanning />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/retirement-planning" element={<RetirementPlanningPage />} />
+          <Route path="/tax-services" element={<TaxServicesPage />} />
+          <Route path="/other-services" element={<OtherServices />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Box>
 
