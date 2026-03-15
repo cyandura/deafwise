@@ -124,11 +124,11 @@ const HomePage: React.FC = () => {
           {/* Stats */}
           <div className="stats-card">
             <div className="stat">
-              <div className="stat-num">MI</div>
+              <div className="stat-num"><img src="images/mich.svg" alt="Michigan" style={{ height: '1em' }} /></div>
               <div className="stat-label">Michigan Based</div>
             </div>
             <div className="stat">
-              <div className="stat-num">🤟</div>
+              <div className="stat-num"><img src="images/ily.svg" alt="I Love You in ASL" style={{ height: '1em' }} /></div>
               <div className="stat-label">Deaf Owned</div>
             </div>
             <div className="stat">
