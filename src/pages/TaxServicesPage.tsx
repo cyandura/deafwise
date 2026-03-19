@@ -13,7 +13,17 @@ const TaxServicesPage: React.FC = () => (
     </section>
 
     <div className="page-content">
-      <p style={{ fontSize: '1.1rem', lineHeight: 1.7, color: 'var(--text-section)', marginBottom: '24px' }}>
+      <div className="contact-card">
+        <div className="contact-card-label">💬 Get in Touch</div>
+        <h3>Let's talk about your Taxes</h3>
+        <p>We can set up a time to discuss your Income Tax. Feel free to reach out — I'm here to help.</p>
+        <a href="mailto:deaftaxlady@gmail.com" className="contact-email">
+          <div className="contact-email-icon">✉️</div>
+          deaftaxlady@gmail.com
+        </a>
+      </div>
+
+      <p style={{ fontSize: '1.1rem', lineHeight: 1.7, color: 'var(--text-section)', marginBottom: '24px', marginTop: '24px' }}>
         I have prepared returns with the following forms:
       </p>
 
